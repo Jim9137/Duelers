@@ -33,11 +33,15 @@ namespace Duelers.Local.Controller
 
             replaceButton = replaceCanvas.GetComponentInChildren<ReplaceButton>();
             replaceButton._buttonClickedEvent.AddListener(UserConfirmReplace);
+
+            handCanvas.enabled = false;
+            replaceCanvas.enabled = false;
         }
 
         private void StartReplace()
         {
             handCanvas.enabled = false;
+            replaceCanvas.enabled = true;
             replaceSlots = replaceCanvas.GetComponentsInChildren<ReplaceCircle>();
         }
 

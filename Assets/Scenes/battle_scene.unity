@@ -205,10 +205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1d12b84f7f48548853a8e708cf4e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitCardPrefab: {fileID: 915466918082386470}
   _grid: {fileID: 1926552806}
   _interface: {fileID: 2052799992}
   _server: {fileID: 2071120184}
+  unitCardPrefab: {fileID: 915466918082386470}
 --- !u!4 &819248950
 Transform:
   m_ObjectHideFlags: 0
@@ -723,6 +723,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2869999139148001252, guid: aff5fcbbe98703a41991a8c8acd869ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956767544795821028, guid: aff5fcbbe98703a41991a8c8acd869ea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5462446845658066504, guid: aff5fcbbe98703a41991a8c8acd869ea,
         type: 3}
       propertyPath: m_Camera
@@ -806,6 +816,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1479149248}
+    - target: {fileID: 7913129143264479695, guid: fb69c3a90c6040848bf0a2d798a6e1bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb69c3a90c6040848bf0a2d798a6e1bc, type: 3}
 --- !u!1001 &9037754981805467424

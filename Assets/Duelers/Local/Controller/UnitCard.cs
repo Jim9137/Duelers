@@ -15,7 +15,9 @@ namespace Duelers.Local.Controller
         [SerializeField] private Text nameText;
 
         [SerializeField] private Canvas unitCanvas;
+
         public string Mana => _cardProperties.Cost.ToString();
+        public string[][] Targets => _cardProperties.Targets;
 
         public void ParseCardJson(CardJson drawMessageCard)
         {
