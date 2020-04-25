@@ -6,6 +6,7 @@ namespace Duelers.Local.Controller
 {
     public class UnitCard : MonoBehaviour
     {
+        [SerializeField] private AnimationController _animationController;
         private CardJson _cardProperties;
         [SerializeField] private Text attackText;
         [SerializeField] private Canvas cardPopup;
@@ -15,11 +16,10 @@ namespace Duelers.Local.Controller
         [SerializeField] private Text nameText;
 
         [SerializeField] private Canvas unitCanvas;
-
         public string Mana => _cardProperties.Cost.ToString();
         public string[][] Targets => _cardProperties.Targets;
 
-        public void ParseCardJson(CardJson drawMessageCard)
+        public void ParseCardJson(CardJson drawMessageCard, string plist)
         {
             _cardProperties = drawMessageCard;
             hpText.text = _cardProperties.Health?.ToString();
@@ -27,8 +27,15 @@ namespace Duelers.Local.Controller
             costText.text = _cardProperties.Cost.ToString();
             descriptionText.text = _cardProperties.Description;
             nameText.text = _cardProperties.Name.ToUpper();
-            // TODO: Load correct sprites 
-            // TODO: Only display sprite at first
+
+            CreateAnimationController(plist);
+        }
+
+        private void CreateAnimationController(string plist)
+        {
+            _animationController.AddPlistFromJson(_cardProperties.SpriteUrl, plist);
+
+            _animationController.StartAnimation("breathing");
         }
     }
 }

@@ -33,15 +33,12 @@ namespace Duelers.Local.Controller
 
             replaceButton = replaceCanvas.GetComponentInChildren<ReplaceButton>();
             replaceButton._buttonClickedEvent.AddListener(UserConfirmReplace);
-
-            handCanvas.enabled = false;
-            replaceCanvas.enabled = false;
         }
 
         private void StartReplace()
         {
-            handCanvas.enabled = false;
-            replaceCanvas.enabled = true;
+            handCanvas.gameObject.SetActive(false);
+            replaceCanvas.gameObject.SetActive(true);
             replaceSlots = replaceCanvas.GetComponentsInChildren<ReplaceCircle>();
         }
 
@@ -80,8 +77,8 @@ namespace Duelers.Local.Controller
 
         public void EndChoice(ResolveChoiceMessage choiceMessage)
         {
-            handCanvas.enabled = true;
-            replaceCanvas.enabled = false;
+            handCanvas.gameObject.SetActive(true);
+            replaceCanvas.gameObject.SetActive(false);
             // TODO: the replaceSlots should be cleared
         }
 

@@ -21,6 +21,7 @@ namespace Duelers.Server
 
         private readonly Queue<string> _messagesReceived = new Queue<string>();
         private readonly Queue<string> _messagesToBeSent = new Queue<string>();
+        private readonly Uri basePath = new Uri("http://duelers.olegmaslennikov.com");
         private readonly Uri gameAddress = new Uri("ws://duelers.olegmaslennikov.com/api/mechazorg/v1/game/");
         private ArraySegment<byte> _buffer = new ArraySegment<byte>(new byte[2048]);
         private string _userToken;
@@ -120,6 +121,12 @@ namespace Duelers.Server
                 var b = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messages)));
                 await _clientWebSocket.SendAsync(b, WebSocketMessageType.Text, true, _cancellationToken);
             }
+        }
+
+        public async Task<string> GetJson(string path)
+        {
+            var res = await _httpClient.GetAsync(basePath + path, _cancellationToken).ConfigureAwait(false);
+            return await res.Content.ReadAsStringAsync();
         }
     }
 }

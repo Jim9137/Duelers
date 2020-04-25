@@ -12,21 +12,21 @@ public class AnimationController : MonoBehaviour
     private Plist _plist;
     public UnityEngine.Animation Animation;
 
-    public Image image;
+    public List<Image> images;
     public Texture2D text;
 
-    public void AddPlistFromJson(string plistPath)
+    public void AddPlistFromJson(string plistPath, string json)
     {
         if (string.IsNullOrEmpty(plistPath)) return;
-
-        var json = Resources.Load<TextAsset>(plistPath).text;
+        var unityPath = plistPath.Replace("/images/", "").Replace(".json", "");
+        // var json = Resources.Load<TextAsset>(unityPath).text;
         var converted = JsonConvert.DeserializeObject<PlistJson>(json);
         _plist = new Plist(converted);
-        text = Resources.Load<Texture2D>(plistPath.Replace(".json", ""));
+        text = Resources.Load<Texture2D>(unityPath);
     }
 
 
-    public void StartOneShot(string animation)
+    public void StartOneShot(string animation, string returnAnimation)
     {
         StopAllCoroutines();
         CreateAnimationIfNotExists(animation);
@@ -48,6 +48,33 @@ public class AnimationController : MonoBehaviour
         StartCoroutine(PlayAnimationLoop(_animations[animation]));
     }
 
+    public void StartAnimationAndReturn(string animation, string returnAnimation)
+    {
+        StopAllCoroutines();
+        CreateAnimationIfNotExists(animation);
+        CreateAnimationIfNotExists(returnAnimation);
+        StartCoroutine(PlayAnimationAndReturn(_animations[animation], _animations[returnAnimation]));
+    }
+
+    private IEnumerator PlayAnimationAndReturn(Sprite[] animation, Sprite[] loop)
+    {
+        var i = 0;
+        while (i < animation.Length)
+        {
+            foreach (var img in images)
+            {
+                img.sprite = animation[i];
+            }
+
+            yield return new WaitForSeconds(FrameRate);
+            i++;
+
+            if (i == animation.Length) i = 0;
+        }
+
+        StartCoroutine(PlayAnimationLoop(loop));
+    }
+
     public void StopAnimations() => StopAllCoroutines();
 
     private IEnumerator PlayAnimationLoop(Sprite[] animation)
@@ -55,7 +82,11 @@ public class AnimationController : MonoBehaviour
         var i = 0;
         while (i < animation.Length)
         {
-            image.sprite = animation[i];
+            foreach (var img in images)
+            {
+                img.sprite = animation[i];
+            }
+
             yield return new WaitForSeconds(FrameRate);
             i++;
 
@@ -68,7 +99,11 @@ public class AnimationController : MonoBehaviour
         var i = 0;
         while (i < animation.Length)
         {
-            image.sprite = animation[i];
+            foreach (var img in images)
+            {
+                img.sprite = animation[i];
+            }
+
             yield return new WaitForSeconds(FrameRate);
             i++;
         }

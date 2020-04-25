@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animation: {fileID: 0}
-  Image: {fileID: 1147689737}
+  images: []
   text: {fileID: 0}
 --- !u!114 &1147689737
 MonoBehaviour:

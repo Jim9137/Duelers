@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 6.13, y: 6.3}
+  m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &597483467
@@ -126,7 +126,7 @@ RectTransform:
   m_GameObject: {fileID: 1991802661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 597483464}
   m_RootOrder: 0
@@ -218,13 +218,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf6aede706f4a6388e789d75db6a9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpText: {fileID: 7913129144068997766}
   attackText: {fileID: 7913129144195347160}
+  cardPopup: {fileID: 7913129143264479691}
   costText: {fileID: 7913129143716606344}
   descriptionText: {fileID: 7913129142374542397}
+  hpText: {fileID: 7913129144068997766}
   nameText: {fileID: 7913129143757578345}
   unitCanvas: {fileID: 597483467}
-  cardPopup: {fileID: 7913129143264479691}
+  _animationController: {fileID: 0}
 --- !u!1 &7913129142253786314
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,14 +407,14 @@ RectTransform:
   m_GameObject: {fileID: 7913129142548345906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 7913129143264479694}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 87}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 124.05, y: 89.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7913129142548345919
