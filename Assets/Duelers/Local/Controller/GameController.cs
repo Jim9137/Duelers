@@ -65,7 +65,7 @@ namespace Duelers.Local.Controller
                             var characterMessage = JsonConvert.DeserializeObject<CharacterMessage>(message);
                             _unitController.HandleCharacter(characterMessage.character);
                             _grid.SetTileObject(
-                                characterMessage.character.tileId,
+                                characterMessage.character.TileId,
                                 _unitController.GetUnit(characterMessage.character.id)
                             );
                             break;

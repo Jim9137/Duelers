@@ -14,14 +14,14 @@ namespace Duelers.Local.Controller
             return false;
         }
 
-        public void HandleCharacter(CharacterJson characterJson)
+        public void HandleCharacter(CardJson characterJson)
         {
-            if (!_units.ContainsKey(characterJson.id)) CreateUnit(characterJson);
+            if (!_units.ContainsKey(characterJson.Id)) CreateUnit(characterJson);
         }
 
         public GameObject GetUnit(string id) => _units.TryGetValue(id, out var gameObject) ? gameObject : null;
 
-        public void CreateUnit(CharacterJson characterJson)
+        public void CreateUnit(CardJson characterJson)
         {
             // TODO: Create unit prefab to do this stuff automatically, eg parse sprites from the plists and so on
             // Performance issue if adding components runtime
