@@ -198,8 +198,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297746149966485963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 127.75, y: 163.45, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 150}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 7913129143264479694}
   - {fileID: 597483464}
@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf6aede706f4a6388e789d75db6a9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animationController: {fileID: 0}
   attackText: {fileID: 7913129144195347160}
   cardPopup: {fileID: 7913129143264479691}
   costText: {fileID: 7913129143716606344}
@@ -225,7 +226,6 @@ MonoBehaviour:
   hpText: {fileID: 7913129144068997766}
   nameText: {fileID: 7913129143757578345}
   unitCanvas: {fileID: 597483467}
-  _animationController: {fileID: 0}
 --- !u!1 &7913129142253786314
 GameObject:
   m_ObjectHideFlags: 0

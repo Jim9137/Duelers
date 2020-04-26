@@ -23,6 +23,11 @@ public class AnimationController : MonoBehaviour
         var converted = JsonConvert.DeserializeObject<PlistJson>(json);
         _plist = new Plist(converted);
         text = Resources.Load<Texture2D>(unityPath);
+
+        foreach (var i in images)
+        {
+            i.SetNativeSize();
+        }
     }
 
 

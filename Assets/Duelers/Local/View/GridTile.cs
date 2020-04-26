@@ -20,6 +20,7 @@ namespace Duelers.Local.View
 
         private Color _originalColor;
         [SerializeField] private Sprite _selectedTile;
+
         private float _sizeX;
         private float _sizeY;
 
@@ -65,7 +66,7 @@ namespace Duelers.Local.View
         private void SetUnitCenter(GameObject go)
         {
             go.transform.parent = transform;
-            go.transform.localPosition = Vector3.zero;
+            go.transform.position = new Vector3(transform.position.x, transform.position.y, 500);
         }
 
 

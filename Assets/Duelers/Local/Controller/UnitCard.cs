@@ -18,6 +18,9 @@ namespace Duelers.Local.Controller
         [SerializeField] private Canvas unitCanvas;
         public string Mana => _cardProperties.Cost.ToString();
         public string[][] Targets => _cardProperties.Targets;
+        public string Id => _cardProperties.Id;
+        public string[] MoveTargets => _cardProperties.MoveTargets;
+        public string[] AttackTargets => _cardProperties.AttackTargets;
 
         public void ParseCardJson(CardJson drawMessageCard, string plist)
         {
@@ -25,8 +28,8 @@ namespace Duelers.Local.Controller
             hpText.text = _cardProperties.Health?.ToString();
             attackText.text = _cardProperties.Attack?.ToString();
             costText.text = _cardProperties.Cost.ToString();
-            descriptionText.text = _cardProperties.Description;
-            nameText.text = _cardProperties.Name.ToUpper();
+            descriptionText.text = _cardProperties?.Description;
+            nameText.text = _cardProperties.Name?.ToUpper();
 
             CreateAnimationController(plist);
         }

@@ -48,11 +48,11 @@ MonoBehaviour:
   _onClickEvent:
     m_PersistentCalls:
       m_Calls: []
-  offset: 0
-  _selectedTile: {fileID: 8569199874629362396, guid: 8dedfd8e7d312e04aa8c8e00a49287e0,
+  _selectedTile: {fileID: -114879710454128290, guid: 96d8145d45bd912448454984842238a9,
     type: 3}
   _unselectedTile: {fileID: -5166837295180149473, guid: 96d8145d45bd912448454984842238a9,
     type: 3}
+  offset: 0
 --- !u!212 &3814941939438940331
 SpriteRenderer:
   m_ObjectHideFlags: 0

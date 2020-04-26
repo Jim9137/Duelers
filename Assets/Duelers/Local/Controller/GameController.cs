@@ -52,6 +52,9 @@ namespace Duelers.Local.Controller
                             ? t
                             : MessageType.NONE;
 
+                    string plist;
+                    UnitCard unit;
+
                     switch (typeOfMessage)
                     {
                         case MessageType.TILE:
@@ -63,10 +66,12 @@ namespace Duelers.Local.Controller
                             break;
                         case MessageType.CHARACTER:
                             var characterMessage = JsonConvert.DeserializeObject<CharacterMessage>(message);
-                            _unitController.HandleCharacter(characterMessage.character);
+                            plist = await _server.GetJson(characterMessage.character.SpriteUrl);
+                            unit = CreateCard(characterMessage.character, plist);
+                            _unitController.HandleCharacter(unit);
                             _grid.SetTileObject(
                                 characterMessage.character.TileId,
-                                _unitController.GetUnit(characterMessage.character.id)
+                                _unitController.GetUnit(characterMessage.character.Id).gameObject
                             );
                             break;
                         case MessageType.CHOICE:
@@ -79,8 +84,8 @@ namespace Duelers.Local.Controller
                             break;
                         case MessageType.DRAW:
                             var drawMessage = JsonConvert.DeserializeObject<DrawMessage>(message);
-                            var plist = await _server.GetJson(drawMessage.Card.SpriteUrl);
-                            var unit = CreateCard(drawMessage.Card, plist);
+                            plist = await _server.GetJson(drawMessage.Card.SpriteUrl);
+                            unit = CreateCard(drawMessage.Card, plist);
                             _interface.AddCardToHand(unit);
                             break;
                         case MessageType.DISCARD:
@@ -100,6 +105,9 @@ namespace Duelers.Local.Controller
         private UnitCard CreateCard(CardJson drawMessageCard, string plist)
         {
             var newCard = Instantiate(unitCardPrefab);
+            var localScale = newCard.transform.localScale;
+            localScale = new Vector3(drawMessageCard.Facing * localScale.x, localScale.y, localScale.z);
+            newCard.transform.localScale = localScale;
             newCard.ParseCardJson(drawMessageCard, plist);
             return newCard;
         }

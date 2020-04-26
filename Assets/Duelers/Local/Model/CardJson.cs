@@ -16,5 +16,7 @@ namespace Duelers.Local.Model
         [JsonProperty("tileId")] public string TileId { get; set; }
         [JsonProperty("moveTargets")] public string[] MoveTargets { get; set; }
         [JsonProperty("attackTargets")] public string[] AttackTargets { get; set; }
+        [JsonProperty("facing")] public int Facing { get; set; }
+        [JsonProperty("owner")] public string Owner { get; set; }
     }
 }
