@@ -3,33 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AnimationController : MonoBehaviour
 {
     private static readonly float FrameRate = 1f / 15f;
     private readonly Dictionary<string, Sprite[]> _animations = new Dictionary<string, Sprite[]>();
     private Plist _plist;
-    public UnityEngine.Animation Animation;
 
-    public List<Image> images;
+    [SerializeField] private List<SpriteRenderer> images;
     public Texture2D text;
 
     public void AddPlistFromJson(string plistPath, string json)
     {
         if (string.IsNullOrEmpty(plistPath)) return;
         var unityPath = plistPath.Replace("/images/", "").Replace(".json", "");
-        // var json = Resources.Load<TextAsset>(unityPath).text;
         var converted = JsonConvert.DeserializeObject<PlistJson>(json);
         _plist = new Plist(converted);
         text = Resources.Load<Texture2D>(unityPath);
-
-        foreach (var i in images)
-        {
-            i.SetNativeSize();
-        }
     }
 
+    public Sprite GetStaticSprite() => _animations.First().Value.First(); // TODO: Just get whatever the heck is first
 
     public void StartOneShot(string animation, string returnAnimation)
     {
@@ -42,7 +35,7 @@ public class AnimationController : MonoBehaviour
     {
         if (!_animations.TryGetValue(animation, out var sprites))
             _animations.Add(animation, _plist.GetAnimation(animation)
-                .Select(x => Sprite.Create(text, x.FrameCoords, Vector2.one / 2f))
+                .Select(x => Sprite.Create(text, x.FrameCoords, new Vector2(0.5f, 0f)))
                 .ToArray());
     }
 
@@ -66,9 +59,12 @@ public class AnimationController : MonoBehaviour
         var i = 0;
         while (i < animation.Length)
         {
-            foreach (var img in images)
+            for (var index = 0; index < images.Count; index++)
             {
-                img.sprite = animation[i];
+                if (images[index] == null)
+                    Debug.LogError("SomeVariable has not been assigned.", this);
+                // Notice, that we pass 'this' as a context object so that Unity will highlight this object when clicked.
+                images[index].sprite = animation[i];
             }
 
             yield return new WaitForSeconds(FrameRate);
@@ -87,9 +83,11 @@ public class AnimationController : MonoBehaviour
         var i = 0;
         while (i < animation.Length)
         {
-            foreach (var img in images)
+            for (var index = 0; index < images.Count; index++)
             {
-                img.sprite = animation[i];
+                if (images[index] == null)
+                    Debug.LogError("SomeVariable has not been assigned.", this);
+                images[index].sprite = animation[i];
             }
 
             yield return new WaitForSeconds(FrameRate);
@@ -104,9 +102,9 @@ public class AnimationController : MonoBehaviour
         var i = 0;
         while (i < animation.Length)
         {
-            foreach (var img in images)
+            for (var index = 0; index < images.Count; index++)
             {
-                img.sprite = animation[i];
+                images[index].sprite = animation[i];
             }
 
             yield return new WaitForSeconds(FrameRate);

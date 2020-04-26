@@ -65,8 +65,10 @@ namespace Duelers.Local.View
 
         private void SetUnitCenter(GameObject go)
         {
+            if (go == null) return;
             go.transform.parent = transform;
-            go.transform.position = new Vector3(transform.position.x, transform.position.y, 500);
+            go.transform.localPosition = Vector2.zero;
+            go.transform.localScale = new Vector3(Mathf.Sign(go.transform.localScale.x) * 2.5f, 2.5f, 2.5f);
         }
 
 

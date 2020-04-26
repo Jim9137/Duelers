@@ -67,8 +67,14 @@ namespace Duelers.Local.Controller
                         case MessageType.CHARACTER:
                             var characterMessage = JsonConvert.DeserializeObject<CharacterMessage>(message);
                             plist = await _server.GetJson(characterMessage.character.SpriteUrl);
-                            unit = CreateCard(characterMessage.character, plist);
-                            _unitController.HandleCharacter(unit);
+                            unit = _unitController.GetUnit(characterMessage.character.Id);
+                            if (unit == null)
+                            {
+                                unit = CreateCard(characterMessage.character, plist);
+                            }
+
+                            _unitController.HandleCharacter(unit, characterMessage.character);
+                            _grid.RemoveTileObject(_unitController.GetUnit(characterMessage.character.Id));
                             _grid.SetTileObject(
                                 characterMessage.character.TileId,
                                 _unitController.GetUnit(characterMessage.character.Id).gameObject
@@ -108,7 +114,7 @@ namespace Duelers.Local.Controller
             var localScale = newCard.transform.localScale;
             localScale = new Vector3(drawMessageCard.Facing * localScale.x, localScale.y, localScale.z);
             newCard.transform.localScale = localScale;
-            newCard.ParseCardJson(drawMessageCard, plist);
+            newCard.ParseCardJson(drawMessageCard, plist, _interface.CardPopup);
             return newCard;
         }
 

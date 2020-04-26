@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Duelers.Local.Controller;
 using Duelers.Local.Model;
 using UnityEngine;
 using UnityEngine.Events;
@@ -54,5 +55,7 @@ namespace Duelers.Local.View
             t.Select();
             _selectedTile = t;
         }
+
+        public void RemoveTileObject(UnitCard getUnit) => _tiles[getUnit.TileId].ObjectOnTile = null;
     }
 }
