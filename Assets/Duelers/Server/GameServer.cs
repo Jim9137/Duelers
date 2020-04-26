@@ -16,13 +16,19 @@ namespace Duelers.Server
     {
         private readonly CancellationToken _cancellationToken = new CancellationToken();
         private readonly ClientWebSocket _clientWebSocket = new ClientWebSocket();
-        private readonly string _deckId = "8";
         private readonly HttpClient _httpClient = new HttpClient();
 
         private readonly Queue<string> _messagesReceived = new Queue<string>();
         private readonly Queue<string> _messagesToBeSent = new Queue<string>();
-        private readonly Uri gameAddress = new Uri("ws://duelers.olegmaslennikov.com/api/mechazorg/v1/game/");
+        private readonly Uri baseUri = new Uri("https://mechaz.org/ ");
+        private readonly Uri gameAddress = new Uri("wss://mechaz.org/api/mechazorg/v1/game/");
         private ArraySegment<byte> _buffer = new ArraySegment<byte>(new byte[2048]);
+        [SerializeField] private string _deckId;
+
+        [SerializeField] private string _password;
+
+        // These are temporary. Deckid you can see on the main website when you go and click your deck
+        [SerializeField] private string _userName;
         private string _userToken;
 
         public void AddMessageToQueue(string message) => _messagesToBeSent.Enqueue(message);
@@ -54,6 +60,10 @@ namespace Duelers.Server
                 await _clientWebSocket.ConnectAsync(gameAddress, _cancellationToken);
                 if (_clientWebSocket.State == WebSocketState.Open) Debug.Log("connected");
                 var content = await Signin();
+                if (content.Contains("error"))
+                {
+                    throw new ArgumentException(content);
+                }
 
                 StartGame(content);
                 ReceiveMessages();
@@ -61,16 +71,17 @@ namespace Duelers.Server
             catch (Exception e)
             {
                 Debug.Log("woe " + e.Message);
+                await _clientWebSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Error", CancellationToken.None);
             }
         }
 
 
         private async Task<string> Signin()
         {
-            var signinType = new SigninMessage("Birb9136", "913789", "PLAIN");
+            var signinType = new SigninMessage("Birb9137", "913789", "PLAIN");
 
             var h = await _httpClient.PostAsync(
-                " http://duelers.olegmaslennikov.com/api/authentication/v1/signin/ ",
+                baseUri + "/api/authentication/v1/signin/ ",
                 new ByteArrayContent(Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(signinType))));
             return await h.Content.ReadAsStringAsync();
         }
@@ -120,6 +131,12 @@ namespace Duelers.Server
                 var b = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messages)));
                 await _clientWebSocket.SendAsync(b, WebSocketMessageType.Text, true, _cancellationToken);
             }
+        }
+
+        public async Task<string> GetJson(string path)
+        {
+            var res = await _httpClient.GetAsync(baseUri + path, _cancellationToken).ConfigureAwait(false);
+            return await res.Content.ReadAsStringAsync();
         }
     }
 }

@@ -10,13 +10,15 @@ namespace Duelers.Local.Controller
     public class InterfaceController : MonoBehaviour
     {
         private readonly List<string> messages = new List<string>();
+        [SerializeField] private CardPopup _cardPopup;
         private string _choiceId;
         [SerializeField] private Canvas handCanvas;
         [SerializeField] private Dictionary<HandSlot, UnitCard> handSlots = new Dictionary<HandSlot, UnitCard>();
         [SerializeField] private ReplaceButton replaceButton;
         [SerializeField] private Canvas replaceCanvas;
-
         [SerializeField] private ReplaceCircle[] replaceSlots;
+
+        public CardPopup CardPopup => _cardPopup;
 
         private void Awake()
         {
@@ -33,15 +35,12 @@ namespace Duelers.Local.Controller
 
             replaceButton = replaceCanvas.GetComponentInChildren<ReplaceButton>();
             replaceButton._buttonClickedEvent.AddListener(UserConfirmReplace);
-
-            handCanvas.enabled = false;
-            replaceCanvas.enabled = false;
         }
 
         private void StartReplace()
         {
-            handCanvas.enabled = false;
-            replaceCanvas.enabled = true;
+            handCanvas.gameObject.SetActive(false);
+            replaceCanvas.gameObject.SetActive(true);
             replaceSlots = replaceCanvas.GetComponentsInChildren<ReplaceCircle>();
         }
 
@@ -80,15 +79,18 @@ namespace Duelers.Local.Controller
 
         public void EndChoice(ResolveChoiceMessage choiceMessage)
         {
-            handCanvas.enabled = true;
-            replaceCanvas.enabled = false;
+            handCanvas.gameObject.SetActive(true);
+            replaceCanvas.gameObject.SetActive(false);
             // TODO: the replaceSlots should be cleared
         }
 
         public void AddCardToHand(UnitCard unitCard)
         {
             var firstFreeSlot = handSlots.First(x => x.Value == null);
-            unitCard.transform.position = firstFreeSlot.Key.gameObject.transform.position;
+            unitCard.gameObject.transform.parent = firstFreeSlot.Key.gameObject.transform;
+            unitCard.gameObject.transform.localPosition = new Vector3(0, 0, 0);
+            unitCard.gameObject.transform.localScale =
+                new Vector3(Mathf.Sign(unitCard.gameObject.transform.localScale.x) * 80f, 80f, 80f);
             handSlots[firstFreeSlot.Key] = unitCard;
             firstFreeSlot.Key.SetMana(unitCard.Mana);
         }
