@@ -78,7 +78,7 @@ namespace Duelers.Server
 
         private async Task<string> Signin()
         {
-            var signinType = new SigninMessage("Birb9137", "913789", "PLAIN");
+            var signinType = new SigninMessage(_userName, _password, "PLAIN");
 
             var h = await _httpClient.PostAsync(
                 baseUri + "/api/authentication/v1/signin/ ",
