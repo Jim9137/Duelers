@@ -25,6 +25,6 @@ public class CardPopup : MonoBehaviour
         hpText.text = card.Health.ToString();
         costText.text = card.Cost.ToString();
         descriptionText.text = card.Description;
-        nameText.text = card.Name;
+        nameText.text = card.Name?.ToUpper();
     }
 }
