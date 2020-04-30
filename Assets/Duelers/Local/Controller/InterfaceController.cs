@@ -60,12 +60,11 @@ namespace Duelers.Local.Controller
             }));
         }
 
-        public void StartChoice(ChoiceMessage choiceMessage)
+        public void StartChoice(ChoiceMessage choiceMessage, List<UnitCard> unitCards)
         {
             StartReplace();
-            var units = choiceMessage.Options;
             // TODO: these should be generated from choiceMessage.selectableOptions
-            for (var i = 0; i < units.Length; i++) replaceSlots[i].CreateChoice(units[i]);
+            for (var i = 0; i < unitCards.Count; i++) replaceSlots[i].CreateChoice(unitCards[i]);
 
             _choiceId = choiceMessage.Id;
         }

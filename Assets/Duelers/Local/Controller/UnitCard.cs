@@ -29,6 +29,18 @@ namespace Duelers.Local.Controller
             _animationController.StartAnimation("breathing");
         }
 
+        public void StartAnimation(string animation, bool oneShot = false)
+        {
+            if (oneShot)
+            {
+                _animationController.StartAnimationAndReturn(animation, "breathing");
+            }
+            else
+            {
+                _animationController.StartAnimation(animation);
+            }
+        }
+
         private void OnMouseEnter()
         {
             cardPopup.SetProperties(_cardProperties, _animationController.GetStaticSprite());

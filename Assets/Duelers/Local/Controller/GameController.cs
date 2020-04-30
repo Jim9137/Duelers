@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Duelers.Local.Model;
 using Duelers.Local.View;
@@ -82,7 +83,21 @@ namespace Duelers.Local.Controller
                             break;
                         case MessageType.CHOICE:
                             var choiceMessage = JsonConvert.DeserializeObject<ChoiceMessage>(message);
-                            _interface.StartChoice(choiceMessage);
+                            var units = new List<UnitCard>();
+                            foreach (var opt in choiceMessage.Options)
+                            {
+                                plist = await _server.GetJson(opt.SpriteUrl);
+                                var newUnit = _unitController.GetUnit(opt.Id);
+                                if (newUnit == null)
+                                {
+                                    newUnit = CreateCard(opt, plist);
+                                }
+
+                                units.Add(newUnit);
+                            }
+
+                            _interface.StartChoice(choiceMessage, units);
+
                             break;
                         case MessageType.RESOLVE_CHOICE:
                             var resolveChoice = JsonConvert.DeserializeObject<ResolveChoiceMessage>(message);
