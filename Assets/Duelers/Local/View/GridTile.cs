@@ -99,15 +99,16 @@ namespace Duelers.Local.View
         public void Unselect()
         {
             _spriteRenderer.sprite = _unselectedTile;
-            var c = Color.red;
-            c.a = 0.3f;
-            _spriteRenderer.color = c;
+            //var c = Color.red;
+            //c.a = 0.3f;
+            //_spriteRenderer.color = c;
         }
 
         public void Select()
         {
             _spriteRenderer.sprite = _selectedTile;
-            _spriteRenderer.color = new Color(255, 255, 255, 1f);
+
+            // _spriteRenderer.color = new Color(255, 255, 255, 1f);
         }
     }
 }
