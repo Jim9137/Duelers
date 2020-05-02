@@ -26,7 +26,7 @@ namespace Duelers.Local.Controller
         private void Start()
         {
             // _selectionController = new SelectionController();
-            _unitController = new UnitController();
+            _unitController = new UnitController();            
         }
 
         private void Update()
@@ -63,6 +63,8 @@ namespace Duelers.Local.Controller
                             var tileMessage = JsonConvert.DeserializeObject<TileMessage>(message);
                             var gridTile = _grid.HandleTile(tileMessage.tile);         
                             gridTile.SubscribeToOnClick(_unitController.OnClick);
+                            gridTile.SubscribeToOnMouseExit(_unitController.OnExit);
+                            gridTile.SubscribeToOnMouseOver(_unitController.OnEnter);
                             break;
                         case MessageType.NONE:
                             break;
@@ -78,7 +80,7 @@ namespace Duelers.Local.Controller
                             _unitController.HandleCharacter(unit, characterMessage.character);
                             var tile = _grid.GetTile(unit.TileId);
                             tile.ObjectOnTile = unit;
-
+                            
                             // _grid.RemoveTileObject(_unitController.GetUnit(characterMessage.character.Id));
                             // _grid.SetTileObject(
                             //     characterMessage.character.TileId,
@@ -101,11 +103,12 @@ namespace Duelers.Local.Controller
                             }
 
                             _interface.StartChoice(choiceMessage, units);
-
+                            _grid.gameObject.SetActive( false);
                             break;
                         case MessageType.RESOLVE_CHOICE:
                             var resolveChoice = JsonConvert.DeserializeObject<ResolveChoiceMessage>(message);
                             _interface.EndChoice(resolveChoice);
+                            _grid.gameObject.SetActive(true);
                             break;
                         case MessageType.CARD:
                             var drawMessage = JsonConvert.DeserializeObject<DrawMessage>(message);

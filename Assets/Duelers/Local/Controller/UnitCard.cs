@@ -46,6 +46,14 @@ namespace Duelers.Local.Controller
             }
         }
 
+        private void OnMouseEnter()
+        {
+            ShowPopup();
+        }
+        private void OnMouseExit()
+        {
+            HidePopup();
+        }
         public void ShowPopup()
         {
             _popup.SetProperties(_cardProperties, _animationController.GetStaticSprite());

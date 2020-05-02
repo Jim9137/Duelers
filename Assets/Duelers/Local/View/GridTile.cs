@@ -21,13 +21,11 @@ namespace Duelers.Local.View
 
     public class GridTile : MonoBehaviour
     {
-        // private readonly Color _mouseOverColor = Color.red;
-
         private ITileObject _objectOnTile;
 
-        public OnMouseEnterEvent _onMouseEnterEvent;
-        public OnMouseExitEvent _onMouseExitEvent;
-        public OnTileClickEvent _onClickEvent;
+        public OnMouseEnterEvent _onMouseEnterEvent = new OnMouseEnterEvent();
+        public OnMouseExitEvent _onMouseExitEvent = new OnMouseExitEvent();
+        public OnTileClickEvent _onClickEvent = new OnTileClickEvent();
 
         private Color _originalColor;
         [SerializeField] private Sprite _selectedTile;
@@ -50,6 +48,12 @@ namespace Duelers.Local.View
             {
                 _objectOnTile = value;
                 SetUnitCenter(value.GameObject);
+                // Remove any colliders
+                var coll = gameObject.GetComponent<BoxCollider2D>();
+                if(coll != null)
+                {
+                    coll.enabled = false;
+                }
             }
         }
 
@@ -96,6 +100,10 @@ namespace Duelers.Local.View
 
         public void SubscribeToOnClick(UnityAction<GridTile, ITileObject> subscriber) =>
             _onClickEvent?.AddListener(subscriber);
+        public void SubscribeToOnMouseOver(UnityAction<GridTile, ITileObject> subscriber) =>
+            _onMouseEnterEvent?.AddListener(subscriber);
+        public void SubscribeToOnMouseExit(UnityAction<GridTile, ITileObject> subscriber) =>
+            _onMouseExitEvent?.AddListener(subscriber);
 
         public void Awake() => _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
@@ -104,13 +112,13 @@ namespace Duelers.Local.View
         private void OnMouseOver()
         {
             _spriteRenderer.sprite = _selectedTile;
-            _onMouseEnterEvent.Invoke(this, _objectOnTile);
+            _onMouseEnterEvent?.Invoke(this, _objectOnTile);
         }
 
         private void OnMouseExit()
         {
             _spriteRenderer.sprite = _unselectedTile;
-            _onMouseExitEvent.Invoke(this, _objectOnTile);
+            _onMouseExitEvent?.Invoke(this, _objectOnTile);
         }
 
         private void OnMouseUpAsButton() => _onClickEvent?.Invoke(this, _objectOnTile);
@@ -118,16 +126,11 @@ namespace Duelers.Local.View
         public void Unselect()
         {
             _spriteRenderer.sprite = _unselectedTile;
-            //var c = Color.red;
-            //c.a = 0.3f;
-            //_spriteRenderer.color = c;
         }
 
         public void Select()
         {
             _spriteRenderer.sprite = _selectedTile;
-
-            // _spriteRenderer.color = new Color(255, 255, 255, 1f);
         }
     }
 }
