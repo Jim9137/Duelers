@@ -12,10 +12,10 @@ namespace Duelers.Local.Controller
 {
     public class GameController : MonoBehaviour
     {
-        [SerializeField] private BattleGrid _grid;
-        [SerializeField] private InterfaceController _interface;
-        private SelectionController _selectionController;
-        [SerializeField] private GameServer _server;
+        [SerializeField] private  BattleGrid _grid;
+        [SerializeField] private  InterfaceController _interface;
+        // private SelectionController _selectionController;
+        [SerializeField] private  GameServer _server;
 
         private UnitController _unitController;
 
@@ -25,8 +25,8 @@ namespace Duelers.Local.Controller
 
         private void Start()
         {
-            _selectionController = new SelectionController();
-            _unitController = new UnitController();
+            // _selectionController = new SelectionController();
+            _unitController = new UnitController();            
         }
 
         private void Update()
@@ -61,8 +61,10 @@ namespace Duelers.Local.Controller
                     {
                         case MessageType.TILE:
                             var tileMessage = JsonConvert.DeserializeObject<TileMessage>(message);
-                            var gridTile = _grid.HandleTile(tileMessage.tile);
-                            gridTile.SubscribeToOnClick(ClickOnTile);
+                            var gridTile = _grid.HandleTile(tileMessage.tile);         
+                            gridTile.SubscribeToOnClick(_unitController.OnClick);
+                            gridTile.SubscribeToOnMouseExit(_unitController.OnExit);
+                            gridTile.SubscribeToOnMouseOver(_unitController.OnEnter);
                             break;
                         case MessageType.NONE:
                             break;
@@ -76,11 +78,14 @@ namespace Duelers.Local.Controller
                             }
 
                             _unitController.HandleCharacter(unit, characterMessage.character);
-                            _grid.RemoveTileObject(_unitController.GetUnit(characterMessage.character.Id));
-                            _grid.SetTileObject(
-                                characterMessage.character.TileId,
-                                _unitController.GetUnit(characterMessage.character.Id).gameObject
-                            );
+                            var tile = _grid.GetTile(unit.TileId);
+                            tile.ObjectOnTile = unit;
+                            
+                            // _grid.RemoveTileObject(_unitController.GetUnit(characterMessage.character.Id));
+                            // _grid.SetTileObject(
+                            //     characterMessage.character.TileId,
+                            //     _unitController.GetUnit(characterMessage.character.Id).gameObject
+                            // );                        
                             break;
                         case MessageType.CHOICE:
                             var choiceMessage = JsonConvert.DeserializeObject<ChoiceMessage>(message);
@@ -98,11 +103,12 @@ namespace Duelers.Local.Controller
                             }
 
                             _interface.StartChoice(choiceMessage, units);
-
+                            _grid.gameObject.SetActive( false);
                             break;
                         case MessageType.RESOLVE_CHOICE:
                             var resolveChoice = JsonConvert.DeserializeObject<ResolveChoiceMessage>(message);
                             _interface.EndChoice(resolveChoice);
+                            _grid.gameObject.SetActive(true);
                             break;
                         case MessageType.CARD:
                             var drawMessage = JsonConvert.DeserializeObject<DrawMessage>(message);
@@ -137,26 +143,9 @@ namespace Duelers.Local.Controller
             localScale = new Vector3(drawMessageCard.Facing * localScale.x, localScale.y, localScale.z);
             newCard.transform.localScale = localScale;
             newCard.ParseCardJson(drawMessageCard, plist, _interface.CardPopup);
+            newCard.name = drawMessageCard.Id;
             return newCard;
-        }
-
-
-        private void ClickOnTile(string tile, GameObject go)
-        {
-            if (go != null)
-            {
-                var active = _selectionController.GetActiveObject();
-                if (active != null) _unitController.TryDoAction(active, go);
-
-                _selectionController.SelectObject(go);
-            }
-            else
-            {
-                _selectionController.SelectEmptyTile();
-            }
-
-            _grid.SelectTile(tile);
-        }
+        }         
     }
 
     public class DiscardMessage : TypeMessage

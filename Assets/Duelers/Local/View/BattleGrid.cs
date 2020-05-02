@@ -21,10 +21,10 @@ namespace Duelers.Local.View
                 Quaternion.Euler(perspectiveRotationAdjustment));
         }
 
-        public GameObject GetTileObject(string tile) =>
+        public ITileObject GetTileObject(string tile) =>
             _tiles.TryGetValue(tile, out var o) ? o.ObjectOnTile : null;
 
-        public void SetTileObject(string tile, GameObject o) => _tiles[tile].ObjectOnTile = o;
+        public void SetTileObject(string tile, ITileObject o) => _tiles[tile].ObjectOnTile = o;
 
         public GridTile HandleTile(TileJson tileJson)
         {
@@ -37,24 +37,26 @@ namespace Duelers.Local.View
             return t;
         }
 
-        public void SubscribeToOnClick(UnityAction<string, GameObject> clickOnTile)
-        {
-            foreach (var v in _tiles.Values) v.SubscribeToOnClick(clickOnTile);
-        }
+        // public void SubscribeToOnClick(UnityAction<string, GameObject> clickOnTile)
+        // {
+        //     foreach (var v in _tiles.Values) v.SubscribeToOnClick(clickOnTile);
+        // }
 
-        public void SelectTile(string tile)
-        {
-            if (_selectedTile != null)
-            {
-                _selectedTile.Unselect();
-                _selectedTile = null;
-            }
+        public GridTile GetTile(string tileId) => _tiles[tileId];
 
-            var t = _tiles[tile];
-            if (!t.ObjectOnTile) return;
-            t.Select();
-            _selectedTile = t;
-        }
+        // public void SelectTile(string tile)
+        // {
+        //     if (_selectedTile != null)
+        //     {
+        //         _selectedTile.Unselect();
+        //         _selectedTile = null;
+        //     }
+
+        //     var t = _tiles[tile];
+        //     if (!t.ObjectOnTile) return;
+        //     t.Select();
+        //     _selectedTile = t;
+        // }
 
         public void RemoveTileObject(UnitCard getUnit) => _tiles[getUnit.TileId].ObjectOnTile = null;
     }

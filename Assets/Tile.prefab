@@ -48,11 +48,11 @@ MonoBehaviour:
   _onClickEvent:
     m_PersistentCalls:
       m_Calls: []
-  _selectedTile: {fileID: -114879710454128290, guid: 96d8145d45bd912448454984842238a9,
+  _selectedTile: {fileID: -4240791356185197731, guid: 96d8145d45bd912448454984842238a9,
     type: 3}
   _unselectedTile: {fileID: -1525399629184950224, guid: 96d8145d45bd912448454984842238a9,
     type: 3}
-  offset: 0
+  offset: 0.05
 --- !u!212 &3814941939438940331
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -5166837295180149473, guid: 96d8145d45bd912448454984842238a9,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.41960785}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.11764706}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -111,7 +111,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8752684614365019368}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
