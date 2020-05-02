@@ -28,7 +28,7 @@ public class AnimationController : MonoBehaviour
     {
         StopAllCoroutines();
         CreateAnimationIfNotExists(animation);
-        StartCoroutine(PlayAnimation(_animations[animation]));
+        StartCoroutine(PlayAnimationAndReturn(_animations[animation], _animations[returnAnimation]));
     }
 
     private void CreateAnimationIfNotExists(string animation)
