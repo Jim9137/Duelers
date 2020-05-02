@@ -102,15 +102,20 @@ namespace Duelers.Local.Controller
                             _interface.StartChoice(choiceMessage, units);
 
                             break;
-                        case MessageType.RESOLVE_CHOICE:
-                            var resolveChoice = JsonConvert.DeserializeObject<ResolveChoiceMessage>(message);
-                            _interface.EndChoice(resolveChoice);
-                            break;
-                        case MessageType.DRAW:
+                        case MessageType.CARD:
                             var drawMessage = JsonConvert.DeserializeObject<DrawMessage>(message);
-                            plist = await _server.GetJson(drawMessage.Card.SpriteUrl);
-                            unit = CreateCard(drawMessage.Card, plist);
-                            _interface.AddCardToHand(unit);
+
+                            if (drawMessage.Card.InHand)
+                            {
+                                plist = await _server.GetJson(drawMessage.Card.SpriteUrl);
+                                unit = CreateCard(drawMessage.Card, plist);
+                                _interface.AddCardToHand(unit);
+                            }
+                            else
+                            {
+                                var old = _unitController.GetUnit(drawMessage.Card.Id);
+                                _interface.RemoveCardFromHand(old);
+                            }
                             break;
                         case MessageType.DISCARD:
                             var discardMessage = JsonConvert.DeserializeObject<DiscardMessage>(message);

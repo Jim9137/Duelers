@@ -10,7 +10,7 @@ public class AnimationController : MonoBehaviour
     private readonly Dictionary<string, Sprite[]> _animations = new Dictionary<string, Sprite[]>();
     private Plist _plist;
 
-    [SerializeField] private readonly List<SpriteRenderer> images;
+    [SerializeField] private SpriteRenderer[] images;
     public Texture2D text;
 
     public void AddPlistFromJson(string plistPath, string json)
@@ -59,7 +59,7 @@ public class AnimationController : MonoBehaviour
         var i = 0;
         while (i < animation.Length)
         {
-            for (var index = 0; index < images.Count; index++)
+            for (var index = 0; index < images.Length; index++)
             {
                 if (images[index] == null)
                     Debug.LogError("SomeVariable has not been assigned.", this);
@@ -83,7 +83,7 @@ public class AnimationController : MonoBehaviour
         var i = 0;
         while (i < animation.Length)
         {
-            for (var index = 0; index < images.Count; index++)
+            for (var index = 0; index < images.Length; index++)
             {
                 if (images[index] == null)
                     Debug.LogError("SomeVariable has not been assigned.", this);
@@ -102,7 +102,7 @@ public class AnimationController : MonoBehaviour
         var i = 0;
         while (i < animation.Length)
         {
-            for (var index = 0; index < images.Count; index++)
+            for (var index = 0; index < images.Length; index++)
             {
                 images[index].sprite = animation[i];
             }
