@@ -33,6 +33,7 @@ public class AnimationController : MonoBehaviour
 
     private void CreateAnimationIfNotExists(string animation)
     {
+
         if (!_animations.TryGetValue(animation, out var sprites))
             _animations.Add(animation, _plist.GetAnimation(animation)
                 .Select(x => Sprite.Create(text, x.FrameCoords, new Vector2(0.5f, 0f)))

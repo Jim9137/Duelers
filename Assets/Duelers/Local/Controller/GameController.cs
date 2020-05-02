@@ -19,7 +19,8 @@ namespace Duelers.Local.Controller
 
         private UnitController _unitController;
 
-        [FormerlySerializedAs("_cardPrefab")] [SerializeField]
+        [FormerlySerializedAs("_cardPrefab")]
+        [SerializeField]
         private UnitCard unitCardPrefab;
 
         private void Start()
@@ -102,6 +103,10 @@ namespace Duelers.Local.Controller
                             _interface.StartChoice(choiceMessage, units);
 
                             break;
+                        case MessageType.RESOLVE_CHOICE:
+                            var resolveChoice = JsonConvert.DeserializeObject<ResolveChoiceMessage>(message);
+                            _interface.EndChoice(resolveChoice);
+                            break;
                         case MessageType.CARD:
                             var drawMessage = JsonConvert.DeserializeObject<DrawMessage>(message);
 
@@ -116,9 +121,6 @@ namespace Duelers.Local.Controller
                                 var old = _unitController.GetUnit(drawMessage.Card.Id);
                                 _interface.RemoveCardFromHand(old);
                             }
-                            break;
-                        case MessageType.DISCARD:
-                            var discardMessage = JsonConvert.DeserializeObject<DiscardMessage>(message);
                             break;
                         default:
                             throw new ArgumentOutOfRangeException();
