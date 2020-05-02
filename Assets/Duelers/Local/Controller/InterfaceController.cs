@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Duelers.Common;
 using Duelers.Local.Model;
@@ -92,6 +93,13 @@ namespace Duelers.Local.Controller
                 new Vector3(Mathf.Sign(unitCard.gameObject.transform.localScale.x) * 80f, 80f, 80f);
             handSlots[firstFreeSlot.Key] = unitCard;
             firstFreeSlot.Key.SetMana(unitCard.Mana);
+        }
+
+        internal void RemoveCardFromHand(UnitCard unit)
+        {
+            var slot = handSlots.First(x => x.Value.Id == unit.Id);
+            GameObject.Destroy(slot.Value.gameObject);
+            handSlots[slot.Key] = null;
         }
     }
 }
