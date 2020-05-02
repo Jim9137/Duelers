@@ -1,13 +1,15 @@
+using System;
 using Duelers.Local.Model;
+using Duelers.Local.View;
 using UnityEngine;
 
 namespace Duelers.Local.Controller
 {
-    public class UnitCard : MonoBehaviour
+    public class UnitCard : MonoBehaviour, ITileObject
     {
         [SerializeField] private AnimationController _animationController;
         [SerializeField] private CardJson _cardProperties;
-        private CardPopup cardPopup;
+        private CardPopup _popup;
 
         public string Mana => _cardProperties.Cost.ToString();
         public string[][] Targets => _cardProperties.Targets;
@@ -16,11 +18,14 @@ namespace Duelers.Local.Controller
         public string[] AttackTargets => _cardProperties.AttackTargets;
         public string TileId => _cardProperties.TileId;
 
+        public GameObject GameObject => gameObject;
+
+
         public void ParseCardJson(CardJson drawMessageCard, string plist, CardPopup popup)
         {
             _cardProperties = drawMessageCard;
             AddAnimationsToAnimationController(plist);
-            this.cardPopup = popup;
+            _popup = popup;
         }
 
         private void AddAnimationsToAnimationController(string plist)
@@ -41,12 +46,12 @@ namespace Duelers.Local.Controller
             }
         }
 
-        private void OnMouseEnter()
+        public void ShowPopup()
         {
-            cardPopup.SetProperties(_cardProperties, _animationController.GetStaticSprite());
-            cardPopup.gameObject.SetActive(true);
+            _popup.SetProperties(_cardProperties, _animationController.GetStaticSprite());
+            _popup.gameObject.SetActive(true);
         }
 
-        private void OnMouseExit() => cardPopup.gameObject.SetActive(false);
+        public void HidePopup() => _popup.gameObject.SetActive(false);
     }
 }

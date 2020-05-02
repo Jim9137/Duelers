@@ -1,21 +1,32 @@
 using System;
+using Duelers.Local.Controller;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace Duelers.Local.View
 {
     [Serializable]
-    public class OnTileClickEvent : UnityEvent<string, GameObject>
+    public class OnTileClickEvent : UnityEvent<GridTile, ITileObject>
     {
     }
 
+    public class OnMouseEnterEvent : UnityEvent<GridTile, ITileObject>
+    {
+    }
+
+    public class OnMouseExitEvent : UnityEvent<GridTile, ITileObject>
+    {
+    }
+
+
     public class GridTile : MonoBehaviour
     {
-        private readonly Color _mouseOverColor = Color.red;
+        // private readonly Color _mouseOverColor = Color.red;
 
-        private GameObject _objectOnTile;
+        private ITileObject _objectOnTile;
 
-
+        public OnMouseEnterEvent _onMouseEnterEvent;
+        public OnMouseExitEvent _onMouseExitEvent;
         public OnTileClickEvent _onClickEvent;
 
         private Color _originalColor;
@@ -32,13 +43,13 @@ namespace Duelers.Local.View
         [SerializeField] private float offset;
         public string Id { get; set; }
 
-        public GameObject ObjectOnTile
+        public ITileObject ObjectOnTile
         {
             get => _objectOnTile;
             set
             {
                 _objectOnTile = value;
-                SetUnitCenter(value);
+                SetUnitCenter(value.GameObject);
             }
         }
 
@@ -83,18 +94,26 @@ namespace Duelers.Local.View
             return new Vector2(_x * _sizeX + X * offset, _y * _sizeY + Y * offset);
         }
 
-        public void SubscribeToOnClick(UnityAction<string, GameObject> subscriber) =>
+        public void SubscribeToOnClick(UnityAction<GridTile, ITileObject> subscriber) =>
             _onClickEvent?.AddListener(subscriber);
 
         public void Awake() => _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         private void Start() => _originalColor = _spriteRenderer.material.color;
 
-        private void OnMouseOver() => _spriteRenderer.material.color = _mouseOverColor;
+        private void OnMouseOver()
+        {
+            _spriteRenderer.sprite = _selectedTile;
+            _onMouseEnterEvent.Invoke(this, _objectOnTile);
+        }
 
-        private void OnMouseExit() => _spriteRenderer.material.color = _originalColor;
+        private void OnMouseExit()
+        {
+            _spriteRenderer.sprite = _unselectedTile;
+            _onMouseExitEvent.Invoke(this, _objectOnTile);
+        }
 
-        private void OnMouseUpAsButton() => _onClickEvent?.Invoke(Id, _objectOnTile);
+        private void OnMouseUpAsButton() => _onClickEvent?.Invoke(this, _objectOnTile);
 
         public void Unselect()
         {

@@ -10,7 +10,7 @@ public class AnimationController : MonoBehaviour
     private readonly Dictionary<string, Sprite[]> _animations = new Dictionary<string, Sprite[]>();
     private Plist _plist;
 
-    [SerializeField] private List<SpriteRenderer> images;
+    [SerializeField] private readonly List<SpriteRenderer> images;
     public Texture2D text;
 
     public void AddPlistFromJson(string plistPath, string json)

@@ -367,9 +367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f03aab126c4e54d8b0f0735b1290e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  images:
-  - {fileID: 365417050}
-  - {fileID: 0}
   text: {fileID: 2800000, guid: debd39aac59578649bfe0cd61e8f0235, type: 3}
 --- !u!114 &354068831
 MonoBehaviour:
@@ -687,8 +684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f03aab126c4e54d8b0f0735b1290e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  images:
-  - {fileID: 1313707742}
   text: {fileID: 2800000, guid: debd39aac59578649bfe0cd61e8f0235, type: 3}
 --- !u!114 &819423604
 MonoBehaviour:
@@ -1091,7 +1086,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5931730022981873055, guid: e651cd5c9b6696540ba94c40d3110550, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e651cd5c9b6696540ba94c40d3110550, type: 3}
 --- !u!4 &1174754627 stripped
 Transform:
@@ -1563,9 +1559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f03aab126c4e54d8b0f0735b1290e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  images:
-  - {fileID: 0}
-  - {fileID: 0}
   text: {fileID: 0}
 --- !u!1 &1883688331
 GameObject:
