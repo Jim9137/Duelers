@@ -18,5 +18,6 @@ namespace Duelers.Local.Model
         [JsonProperty("attackTargets")] public string[] AttackTargets { get; set; }
         [JsonProperty("facing")] public int Facing { get; set; }
         [JsonProperty("owner")] public string Owner { get; set; }
+        [JsonProperty("inHand")] public bool InHand { get; set; }
     }
 }

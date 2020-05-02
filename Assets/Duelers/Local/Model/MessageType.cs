@@ -7,7 +7,6 @@ namespace Duelers.Local.Model
         CHARACTER,
         CHOICE,
         RESOLVE_CHOICE,
-        DRAW,
-        DISCARD
+        CARD
     }
 }
