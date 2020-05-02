@@ -13,6 +13,22 @@ public class AnimationController : MonoBehaviour
     [SerializeField] private SpriteRenderer[] images;
     public Texture2D text;
 
+    private IEnumerator _animationCall;
+
+    private void OnEnable()
+    {
+        if (_animationCall != null)
+        {
+            StartCoroutine(_animationCall);
+        }
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+
     public void AddPlistFromJson(string plistPath, string json)
     {
         if (string.IsNullOrEmpty(plistPath)) return;
@@ -24,11 +40,17 @@ public class AnimationController : MonoBehaviour
 
     public Sprite GetStaticSprite() => _animations.First().Value.First(); // TODO: Just get whatever the heck is first
 
-    public void StartOneShot(string animation, string returnAnimation)
+
+    private void AnimationSetup(string animation)
     {
         StopAllCoroutines();
         CreateAnimationIfNotExists(animation);
-        StartCoroutine(PlayAnimationAndReturn(_animations[animation], _animations[returnAnimation]));
+    }
+    private void AnimationSetup(string animation, string returnAnimation)
+    {
+        StopAllCoroutines();
+        CreateAnimationIfNotExists(animation);
+        CreateAnimationIfNotExists(returnAnimation);
     }
 
     private void CreateAnimationIfNotExists(string animation)
@@ -40,19 +62,26 @@ public class AnimationController : MonoBehaviour
                 .ToArray());
     }
 
+    public void StartOneShot(string animation, string returnAnimation)
+    {
+        AnimationSetup(animation);
+        _animationCall = PlayAnimationAndReturn(_animations[animation], _animations[returnAnimation]);
+        StartCoroutine(_animationCall);
+
+    }
     public void StartAnimation(string animation)
     {
-        StopAllCoroutines();
-        CreateAnimationIfNotExists(animation);
-        StartCoroutine(PlayAnimationLoop(_animations[animation]));
+        AnimationSetup(animation);
+        _animationCall = PlayAnimationLoop(_animations[animation]);
+        StartCoroutine(_animationCall);
+
     }
 
     public void StartAnimationAndReturn(string animation, string returnAnimation)
     {
-        StopAllCoroutines();
-        CreateAnimationIfNotExists(animation);
-        CreateAnimationIfNotExists(returnAnimation);
-        StartCoroutine(PlayAnimationAndReturn(_animations[animation], _animations[returnAnimation]));
+        AnimationSetup(animation, returnAnimation);
+        _animationCall = PlayAnimationAndReturn(_animations[animation], _animations[returnAnimation]);
+        StartCoroutine(_animationCall);
     }
 
     private IEnumerator PlayAnimationAndReturn(Sprite[] animation, Sprite[] loop)
