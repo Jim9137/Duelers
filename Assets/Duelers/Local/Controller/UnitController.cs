@@ -11,6 +11,19 @@ namespace Duelers.Local.Controller
         private readonly Dictionary<string, UnitCard> _units = new Dictionary<string, UnitCard>();
         private (GridTile, UnitCard) selected;
 
+        public UnitController()
+        {
+            GridTile.OnMouseExitEvent += OnExit;
+            GridTile.OnMouseOverEvent += OnOver;
+            GridTile.OnMouseClickEvent += OnClick;
+        }
+
+        ~UnitController()
+        {
+            GridTile.OnMouseExitEvent -= OnExit;
+            GridTile.OnMouseOverEvent -= OnOver;
+            GridTile.OnMouseClickEvent -= OnClick;
+        }
         public bool TryDoAction(GameObject active, GameObject go)
         {
             Debug.Log($"Some magic between {active} and {go}");
@@ -31,8 +44,9 @@ namespace Duelers.Local.Controller
         // TODO: Add OnEnter -> show available targets and movement tiles.        
         // TODO: Add OnExit -> don't show available targets and movement tiles.        
 
-        internal void OnEnter(GridTile tileClicked, ITileObject objectOnTile)
+        internal void OnOver(GridTile tileClicked)
         {
+            var objectOnTile = tileClicked?.ObjectOnTile;
             if (objectOnTile == null)
             {
                 return;
@@ -47,9 +61,11 @@ namespace Duelers.Local.Controller
 
 
         }
-        
-        internal void OnExit(GridTile tileClicked, ITileObject objectOnTile)
+
+        internal void OnExit(GridTile tileClicked)
         {
+            var objectOnTile = tileClicked?.ObjectOnTile;
+
             if (objectOnTile == null)
             {
                 return;
@@ -63,8 +79,10 @@ namespace Duelers.Local.Controller
             go.HidePopup();
         }
 
-        internal void OnClick(GridTile tileClicked, ITileObject objectOnTile)
+        internal void OnClick(GridTile tileClicked)
         {
+            var objectOnTile = tileClicked?.ObjectOnTile;
+
             var go = objectOnTile as UnitCard;
             // if(objectOnTile == null)
             // {

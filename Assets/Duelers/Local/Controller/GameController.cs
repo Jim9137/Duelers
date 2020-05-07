@@ -26,7 +26,8 @@ namespace Duelers.Local.Controller
         private void Start()
         {
             // _selectionController = new SelectionController();
-            _unitController = new UnitController();            
+            _unitController = new UnitController();
+
         }
 
         private void Update()
@@ -61,10 +62,7 @@ namespace Duelers.Local.Controller
                     {
                         case MessageType.TILE:
                             var tileMessage = JsonConvert.DeserializeObject<TileMessage>(message);
-                            var gridTile = _grid.HandleTile(tileMessage.tile);         
-                            gridTile.SubscribeToOnClick(_unitController.OnClick);
-                            gridTile.SubscribeToOnMouseExit(_unitController.OnExit);
-                            gridTile.SubscribeToOnMouseOver(_unitController.OnEnter);
+                            var gridTile = _grid.HandleTile(tileMessage.tile);                                     
                             break;
                         case MessageType.NONE:
                             break;
