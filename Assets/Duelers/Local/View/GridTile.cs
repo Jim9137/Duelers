@@ -6,7 +6,7 @@ using UnityEngine.Events;
 namespace Duelers.Local.View
 {
 
-    public class GridTile : MonoBehaviour
+    public class OnMouseEnterEvent : UnityEvent<GridTile, ITileObject>
     {
         private ITileObject _objectOnTile;
 
