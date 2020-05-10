@@ -75,17 +75,17 @@ namespace Duelers.Local.Controller
             foreach (var tile in go.MoveTargets)
             {
                 var t = _grid.GetTile(tile);
-                t.HighlightTile();
+                t.HighlightTile(Color.white);
             }
         }
 
         internal void OnExit(GridTile tileClicked)
         {
             var objectOnTile = tileClicked?.ObjectOnTile;
-           
+
             if (_selected.Item2?.MoveTargets.Any(x => x == tileClicked.Id) == true)
             {
-                tileClicked.HighlightTile();
+                tileClicked.HighlightTile(Color.white);
             }
             else
             {
@@ -122,23 +122,15 @@ namespace Duelers.Local.Controller
             var objectOnTile = tileClicked?.ObjectOnTile;
 
             var go = objectOnTile as UnitCard;
-            // if(objectOnTile == null)
-            // {
-            //     Deselect();            
-            // }
+
             // TODO: Check who owns the thing, then do stuff accordingly.
+            Deselect();
+
             if (_units.TryGetValue(go?.name ?? "", out var value))
             {
-                Deselect();
                 _selected = (tileClicked, value);
                 tileClicked.Select();
                 ShowMovementTiles(go);
-
-                // return;
-            }
-            else
-            {
-                Deselect();
             }
         }
 

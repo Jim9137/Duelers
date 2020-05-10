@@ -22,6 +22,7 @@ namespace Duelers.Server
         private readonly Queue<string> _messagesToBeSent = new Queue<string>();
         private readonly Uri baseUri = new Uri("https://mechaz.org/ ");
         private readonly Uri gameAddress = new Uri("wss://mechaz.org/api/mechazorg/v1/game/");
+        private readonly Uri resolveAddress = new Uri("https://mechaz.org/api/mechazorg/v1/resolve-target/");
         private ArraySegment<byte> _buffer = new ArraySegment<byte>(new byte[2048]);
         [SerializeField] private string _deckId;
 
@@ -30,10 +31,10 @@ namespace Duelers.Server
         // These are temporary. Deckid you can see on the main website when you go and click your deck
         [SerializeField] private string _userName;
         private string _userToken;
+        public string Token { get => _userToken; }
 
         public void AddMessageToQueue(string message) => _messagesToBeSent.Enqueue(message);
         public string PopMessageFromQueue() => _messagesReceived.Count > 0 ? _messagesReceived.Dequeue() : "";
-
         private void Awake()
         {
             Connect();
@@ -131,6 +132,16 @@ namespace Duelers.Server
                 var b = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messages)));
                 await _clientWebSocket.SendAsync(b, WebSocketMessageType.Text, true, _cancellationToken);
             }
+        }
+        public async Task<string> GetTargets(ResolveTargetRequest resolveTargets)
+        {
+            if (resolveTargets == null)
+                throw new ArgumentNullException(nameof(resolveTargets));
+
+            resolveTargets.Token = _userToken;
+            var content = new StringContent(JsonConvert.SerializeObject(resolveTargets), Encoding.UTF8, "application/json");
+            var res = await _httpClient.PostAsync(resolveAddress, content, _cancellationToken).ConfigureAwait(false);
+            return await res.Content.ReadAsStringAsync();
         }
 
         public async Task<string> GetJson(string path)

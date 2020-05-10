@@ -23,10 +23,12 @@ namespace Duelers.Local.View
         private float _sizeY;
 
         private SpriteRenderer _spriteRenderer;
+        private Color _defaultColor;
         private int _x;
         private int _y;
 
         [SerializeField] private float offset;
+        private bool _keepHighlight;
 
         public string Id { get; set; }
 
@@ -87,12 +89,34 @@ namespace Duelers.Local.View
             return new Vector2(_x * _sizeX + X * offset, _y * _sizeY + Y * offset);
         }
 
-        public void HighlightTile() => _spriteRenderer.sprite = _highlightTile;
-        public void UnHighlightTile() => _spriteRenderer.sprite = _spriteRenderer.sprite = _unselectedTile;
-        public void ShowCursorOverTile() => _spriteRenderer.sprite = _selectedTile;
-        public void HideCursorOnTile() => _spriteRenderer.sprite = _unselectedTile;
+        public void HighlightTile(Color color, bool keep = false)
+        {
+            _keepHighlight = keep;
+            _spriteRenderer.sprite = _highlightTile;
+            _spriteRenderer.color = new Color(color.r, color.g, color.b, _defaultColor.a + 0.1f);
+        }
+        public void UnHighlightTile()
+        {
+            _spriteRenderer.sprite = _unselectedTile;
+            _spriteRenderer.color = _defaultColor;
+        }
+        public void ShowCursorOverTile()
+        {
+            _spriteRenderer.sprite = _selectedTile;
+            _spriteRenderer.color = _defaultColor;
 
-        public void Awake() => _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        }
+        public void HideCursorOnTile()
+        {
+            if (!_keepHighlight)
+                _spriteRenderer.sprite = _unselectedTile;
+        }
+
+        public void Awake()
+        {
+            _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+            _defaultColor = _spriteRenderer.color;
+        }
 
         private void Start() => _originalColor = _spriteRenderer.material.color;
 
@@ -105,10 +129,13 @@ namespace Duelers.Local.View
         public void Unselect()
         {
             _spriteRenderer.sprite = _unselectedTile;
+            _spriteRenderer.color = _defaultColor;
         }
 
         public void Select()
         {
+            _spriteRenderer.color = new Color(_defaultColor.r, _defaultColor.g, _defaultColor.b, _defaultColor.a + 0.2f);
+
             _spriteRenderer.sprite = _selectedTile;
         }
     }

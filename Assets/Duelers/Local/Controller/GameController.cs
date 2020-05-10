@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Duelers.Common;
 using Duelers.Local.Model;
 using Duelers.Local.View;
 using Duelers.Server;
@@ -12,10 +14,10 @@ namespace Duelers.Local.Controller
 {
     public class GameController : MonoBehaviour
     {
-        [SerializeField] private  BattleGrid _grid;
-        [SerializeField] private  InterfaceController _interface;
+        [SerializeField] private BattleGrid _grid;
+        [SerializeField] private InterfaceController _interface;
         // private SelectionController _selectionController;
-        [SerializeField] private  GameServer _server;
+        [SerializeField] private GameServer _server;
 
         private UnitController _unitController;
 
@@ -23,10 +25,11 @@ namespace Duelers.Local.Controller
         [SerializeField]
         private UnitCard unitCardPrefab;
 
-        private void Start()
+        private void Awake()
         {
             // _selectionController = new SelectionController();
             _unitController = new UnitController(_grid);
+            _interface.Grid = _grid;
         }
 
         private void Update()
@@ -48,6 +51,7 @@ namespace Duelers.Local.Controller
             if (!string.IsNullOrEmpty(message))
                 try
                 {
+
                     var typeOfMessage =
                         Enum.TryParse<MessageType>(JsonConvert.DeserializeObject<TypeMessage>(message).Type ?? "NONE",
                             out var t)
@@ -61,7 +65,7 @@ namespace Duelers.Local.Controller
                     {
                         case MessageType.TILE:
                             var tileMessage = JsonConvert.DeserializeObject<TileMessage>(message);
-                            var gridTile = _grid.HandleTile(tileMessage.tile);                                     
+                            var gridTile = _grid.HandleTile(tileMessage.tile);
                             break;
                         case MessageType.NONE:
                             break;
@@ -77,7 +81,12 @@ namespace Duelers.Local.Controller
                             _unitController.HandleCharacter(unit, characterMessage.character);
                             var tile = _grid.GetTile(unit.TileId);
                             tile.ObjectOnTile = unit;
-                            
+                            _interface.Targets.Add(unit.Id, JsonConvert.DeserializeObject<TargetList>(_server.GetTargets(new ResolveTargetRequest()
+                            {
+                                Target = unit.Targets.FirstOrDefault(),
+                                Targets= Array.Empty<string>(),
+                                LastTarget = null
+                            }).Result));
                             // _grid.RemoveTileObject(_unitController.GetUnit(characterMessage.character.Id));
                             // _grid.SetTileObject(
                             //     characterMessage.character.TileId,
@@ -97,10 +106,11 @@ namespace Duelers.Local.Controller
                                 }
 
                                 units.Add(newUnit);
+
                             }
 
                             _interface.StartChoice(choiceMessage, units);
-                            _grid.gameObject.SetActive( false);
+                            _grid.gameObject.SetActive(false);
                             break;
                         case MessageType.RESOLVE_CHOICE:
                             var resolveChoice = JsonConvert.DeserializeObject<ResolveChoiceMessage>(message);
@@ -114,13 +124,23 @@ namespace Duelers.Local.Controller
                             {
                                 plist = await _server.GetJson(drawMessage.Card.SpriteUrl);
                                 unit = CreateCard(drawMessage.Card, plist);
+
                                 _interface.AddCardToHand(unit);
                             }
                             else
                             {
-                                var old = _unitController.GetUnit(drawMessage.Card.Id);
-                                _interface.RemoveCardFromHand(old);
+                                unit = _unitController.GetUnit(drawMessage.Card.Id);
+                                _interface.RemoveCardFromHand(unit);
                             }
+
+                            _interface.Targets.Add(unit.Id, JsonConvert.DeserializeObject<TargetList>(_server.GetTargets(
+                                new ResolveTargetRequest()
+                                {
+                                    Target = unit.Targets.FirstOrDefault(),
+                                    Targets = Array.Empty<string>(),
+                                    LastTarget = null
+                                }
+                            ).Result));
                             break;
                         default:
                             throw new ArgumentOutOfRangeException();
@@ -142,7 +162,7 @@ namespace Duelers.Local.Controller
             newCard.ParseCardJson(drawMessageCard, plist, _interface.CardPopup);
             newCard.name = drawMessageCard.Id;
             return newCard;
-        }         
+        }
     }
 
     public class DiscardMessage : TypeMessage
