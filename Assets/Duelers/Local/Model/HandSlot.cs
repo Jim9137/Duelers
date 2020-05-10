@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Duelers.Local.Model
+namespace Duelers.Local.Model
 {
     public class HandSlot : MonoBehaviour
     {

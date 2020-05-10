@@ -16,16 +16,18 @@ namespace Duelers.Local.View
 
         private Color _originalColor;
         [SerializeField] private Sprite _selectedTile;
+        [SerializeField] private Sprite _highlightTile;
+        [SerializeField] private Sprite _unselectedTile;
 
         private float _sizeX;
         private float _sizeY;
 
         private SpriteRenderer _spriteRenderer;
-        [SerializeField] private Sprite _unselectedTile;
         private int _x;
         private int _y;
 
         [SerializeField] private float offset;
+
         public string Id { get; set; }
 
         public ITileObject ObjectOnTile
@@ -36,7 +38,7 @@ namespace Duelers.Local.View
                 _objectOnTile = value;
                 SetUnitCenter(value.GameObject);
                 // Remove any colliders
-                var coll = gameObject.GetComponent<BoxCollider2D>();
+                var coll = value.GameObject.GetComponent<BoxCollider2D>();
                 if (coll != null)
                 {
                     coll.enabled = false;
@@ -83,24 +85,20 @@ namespace Duelers.Local.View
             _sizeY = size.y;
 
             return new Vector2(_x * _sizeX + X * offset, _y * _sizeY + Y * offset);
-        } 
+        }
+
+        public void HighlightTile() => _spriteRenderer.sprite = _highlightTile;
+        public void UnHighlightTile() => _spriteRenderer.sprite = _spriteRenderer.sprite = _unselectedTile;
+        public void ShowCursorOverTile() => _spriteRenderer.sprite = _selectedTile;
+        public void HideCursorOnTile() => _spriteRenderer.sprite = _unselectedTile;
 
         public void Awake() => _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
         private void Start() => _originalColor = _spriteRenderer.material.color;
 
-        private void OnMouseOver()
-        {
-            _spriteRenderer.sprite = _selectedTile;
-            OnMouseOverEvent(this);
-        }
+        private void OnMouseOver() => OnMouseOverEvent(this);
 
-        private void OnMouseExit()
-        {
-            _spriteRenderer.sprite = _unselectedTile;
-            OnMouseExitEvent(this);
-
-        }
+        private void OnMouseExit() => OnMouseExitEvent(this);
 
         private void OnMouseUpAsButton() => OnMouseClickEvent(this);
 

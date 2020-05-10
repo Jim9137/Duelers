@@ -45,10 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c579198af9b464ea70677b63cb67d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onClickEvent:
-    m_PersistentCalls:
-      m_Calls: []
   _selectedTile: {fileID: -4240791356185197731, guid: 96d8145d45bd912448454984842238a9,
+    type: 3}
+  _highlightTile: {fileID: -114879710454128290, guid: 96d8145d45bd912448454984842238a9,
     type: 3}
   _unselectedTile: {fileID: -1525399629184950224, guid: 96d8145d45bd912448454984842238a9,
     type: 3}

@@ -26,7 +26,7 @@ namespace Duelers.Local.Controller
         private void Start()
         {
             // _selectionController = new SelectionController();
-            _unitController = new UnitController();            
+            _unitController = new UnitController(_grid);
         }
 
         private void Update()

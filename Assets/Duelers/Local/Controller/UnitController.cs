@@ -1,22 +1,27 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Duelers.Local.Model;
 using Duelers.Local.View;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Duelers.Local.Controller
 {
     public class UnitController
     {
         private readonly Dictionary<string, UnitCard> _units = new Dictionary<string, UnitCard>();
-        private (GridTile, UnitCard) selected;
+        private readonly BattleGrid _grid;
+        private (GridTile, UnitCard) _selected;
 
-        public UnitController()
+        public UnitController(BattleGrid _grid)
         {
             GridTile.OnMouseExitEvent += OnExit;
             GridTile.OnMouseOverEvent += OnOver;
             GridTile.OnMouseClickEvent += OnClick;
+            this._grid = _grid;
         }
+
 
         ~UnitController()
         {
@@ -47,24 +52,45 @@ namespace Duelers.Local.Controller
         internal void OnOver(GridTile tileClicked)
         {
             var objectOnTile = tileClicked?.ObjectOnTile;
+            tileClicked.ShowCursorOverTile();
             if (objectOnTile == null)
             {
                 return;
             }
 
             var go = objectOnTile as UnitCard;
+
             if (go == null)
             {
                 return;
             }
+
             go.ShowPopup();
+            ShowMovementTiles(go);
 
+        }
 
+        private void ShowMovementTiles(UnitCard go)
+        {
+            foreach (var tile in go.MoveTargets)
+            {
+                var t = _grid.GetTile(tile);
+                t.HighlightTile();
+            }
         }
 
         internal void OnExit(GridTile tileClicked)
         {
             var objectOnTile = tileClicked?.ObjectOnTile;
+           
+            if (_selected.Item2?.MoveTargets.Any(x => x == tileClicked.Id) == true)
+            {
+                tileClicked.HighlightTile();
+            }
+            else
+            {
+                tileClicked.HideCursorOnTile();
+            }
 
             if (objectOnTile == null)
             {
@@ -72,11 +98,23 @@ namespace Duelers.Local.Controller
             }
 
             var go = objectOnTile as UnitCard;
-            if (go == null)
+            go.HidePopup();
+
+            if (go == null || go?.name == _selected.Item2?.name)
             {
                 return;
             }
-            go.HidePopup();
+
+            HideMovementTiles(go);
+        }
+
+        private void HideMovementTiles(UnitCard go)
+        {
+            foreach (var tile in go.MoveTargets)
+            {
+                var t = _grid.GetTile(tile);
+                t.UnHighlightTile();
+            }
         }
 
         internal void OnClick(GridTile tileClicked)
@@ -91,8 +129,11 @@ namespace Duelers.Local.Controller
             // TODO: Check who owns the thing, then do stuff accordingly.
             if (_units.TryGetValue(go?.name ?? "", out var value))
             {
-                selected = (tileClicked, value);
+                Deselect();
+                _selected = (tileClicked, value);
                 tileClicked.Select();
+                ShowMovementTiles(go);
+
                 // return;
             }
             else
@@ -103,12 +144,14 @@ namespace Duelers.Local.Controller
 
         private void Deselect()
         {
-            if (selected.Item1 == null)
+            if (_selected.Item1 == null)
             {
                 return;
             }
-            selected.Item1.Unselect();
-            selected = (null, null);
+            _selected.Item1.Unselect();
+            HideMovementTiles(_selected.Item2);
+
+            _selected = (null, null);
 
         }
     }

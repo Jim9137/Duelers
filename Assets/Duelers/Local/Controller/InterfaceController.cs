@@ -98,8 +98,10 @@ namespace Duelers.Local.Controller
         internal void RemoveCardFromHand(UnitCard unit)
         {
             var slot = handSlots.First(x => x.Value.Id == unit.Id);
-            GameObject.Destroy(slot.Value.gameObject);
+            Destroy(slot.Value.gameObject);
             handSlots[slot.Key] = null;
         }
+
+
     }
 }
