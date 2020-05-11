@@ -17,9 +17,9 @@ namespace Duelers.Local.Controller
         [SerializeField] private ReplaceButton replaceButton;
         [SerializeField] private Canvas replaceCanvas;
         [SerializeField] private ReplaceCircle[] replaceSlots;
-        private  List<string> messages;
+        private List<string> messages;
         private string _choiceId;
-        public  BattleGrid Grid { get; set; }
+        public BattleGrid Grid { get; set; }
         public string Token { get; set; }
         private (HandSlot slot, UnitCard unit) _selected;
         public Dictionary<string, TargetList> Targets = new Dictionary<string, TargetList>();
@@ -27,6 +27,9 @@ namespace Duelers.Local.Controller
         private void Destroy()
         {
             HandSlot.OnMouseClickEvent -= SelectHandCard;
+            GridTile.OnMouseClickEvent -= HandleClick;
+            GridTile.OnMouseOverEvent -= HighlightCursor;
+            GridTile.OnMouseExitEvent -= HideHighlightCursor;
         }
 
         public CardPopup CardPopup => _cardPopup;
@@ -37,6 +40,9 @@ namespace Duelers.Local.Controller
         {
             messages = new List<string>();
             HandSlot.OnMouseClickEvent += SelectHandCard;
+            GridTile.OnMouseOverEvent += HighlightCursor;
+            GridTile.OnMouseExitEvent += HideHighlightCursor;
+            GridTile.OnMouseClickEvent += HandleClick;
 
             var dictionary = new Dictionary<HandSlot, UnitCard>();
             var slots = handCanvas.GetComponentsInChildren<HandSlot>().OrderBy(x => x.name).ToArray();
@@ -51,6 +57,38 @@ namespace Duelers.Local.Controller
 
             replaceButton = replaceCanvas.GetComponentInChildren<ReplaceButton>();
             replaceButton._buttonClickedEvent.AddListener(UserConfirmReplace);
+        }
+
+        private void HandleClick(GridTile tile)
+        {
+            if(_selected.unit == null)
+            {
+                return;
+            }
+            if (Targets[_selected.unit.Id].Ids.Contains(tile.Id))
+            {
+                Debug.Log("Summoning unit " + _selected.unit.name);
+            }
+            else
+            {
+                UnselectHandCard();
+            }
+        }
+
+        private void UnselectHandCard()
+        {
+            if(_selected.unit == null)
+            {
+                Debug.LogWarning("Trying to unselect null object", this);
+                return;
+            }
+            foreach (var id in Targets[_selected.unit.Id].Ids)
+            {
+                var t = Grid.GetTile(id);
+                t.HideSummonTile();
+            }
+
+            _selected = (null, null);
         }
 
         private void StartReplace()
@@ -146,11 +184,13 @@ namespace Duelers.Local.Controller
             foreach (var id in Targets[go.Id].Ids)
             {
                 var t = Grid.GetTile(id);
-                t.HighlightTile(Color.white, keep: true);
+                t.ShowSummonTile();
             }
 
             _selected = (slot, go);
-
         }
+
+        public void HighlightCursor(GridTile tile) => tile.ShowHighlightTile();
+        public void HideHighlightCursor(GridTile tile) => tile.HideHighlightTile();
     }
 }

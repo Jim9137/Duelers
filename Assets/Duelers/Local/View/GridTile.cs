@@ -1,7 +1,10 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Duelers.Local.Controller;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Tilemaps;
 
 namespace Duelers.Local.View
 {
@@ -14,21 +17,20 @@ namespace Duelers.Local.View
         public static event Action<GridTile> OnMouseExitEvent = delegate { };
         public static event Action<GridTile> OnMouseClickEvent = delegate { };
 
-        private Color _originalColor;
-        [SerializeField] private Sprite _selectedTile;
-        [SerializeField] private Sprite _highlightTile;
-        [SerializeField] private Sprite _unselectedTile;
+        [SerializeField] private GameObject _highlightTile;
+        [SerializeField] private GameObject _attackTile;
+        [SerializeField] private GameObject _movementTile;
+        [SerializeField] private GameObject _summonTile;
+        [SerializeField] private GameObject _defaultTile;
+
 
         private float _sizeX;
         private float _sizeY;
-
-        private SpriteRenderer _spriteRenderer;
-        private Color _defaultColor;
+        private IEnumerable<GameObject> _childSprites;
         private int _x;
         private int _y;
 
         [SerializeField] private float offset;
-        private bool _keepHighlight;
 
         public string Id { get; set; }
 
@@ -69,6 +71,7 @@ namespace Duelers.Local.View
             }
         }
 
+
         private void SetUnitCenter(GameObject go)
         {
             if (go == null) return;
@@ -80,45 +83,31 @@ namespace Duelers.Local.View
 
         private Vector2 TranslateGridToWorld()
         {
-            _spriteRenderer = _spriteRenderer != null ? _spriteRenderer : gameObject.GetComponent<SpriteRenderer>();
 
-            var size = _spriteRenderer.size;
+            var size = _childSprites.FirstOrDefault().GetComponent<SpriteRenderer>().size; // unachk this
             _sizeX = size.x;
             _sizeY = size.y;
 
             return new Vector2(_x * _sizeX + X * offset, _y * _sizeY + Y * offset);
         }
 
-        public void HighlightTile(Color color, bool keep = false)
-        {
-            _keepHighlight = keep;
-            _spriteRenderer.sprite = _highlightTile;
-            _spriteRenderer.color = new Color(color.r, color.g, color.b, _defaultColor.a + 0.1f);
-        }
-        public void UnHighlightTile()
-        {
-            _spriteRenderer.sprite = _unselectedTile;
-            _spriteRenderer.color = _defaultColor;
-        }
-        public void ShowCursorOverTile()
-        {
-            _spriteRenderer.sprite = _selectedTile;
-            _spriteRenderer.color = _defaultColor;
+        public void ShowHighlightTile() => EnableTile(TileState.Highlight);
+        public void ShowSummonTile() => EnableTile(TileState.Summon);
+        public void ShowAttackTile() => EnableTile(TileState.Attack);
+        public void ShowMovementTile() => EnableTile(TileState.Movement);
 
-        }
-        public void HideCursorOnTile()
-        {
-            if (!_keepHighlight)
-                _spriteRenderer.sprite = _unselectedTile;
-        }
+        public void HideSummonTile() => DisableTile(TileState.Summon);
+
+        public void HideAttackTile() => DisableTile(TileState.Attack);
+        public void HideMovementTile() => DisableTile(TileState.Movement);
+        public void HideHighlightTile() => DisableTile(TileState.Highlight);
+
 
         public void Awake()
         {
-            _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-            _defaultColor = _spriteRenderer.color;
+            _childSprites = new GameObject[] { _highlightTile, _defaultTile, _attackTile, _summonTile }; // hack for lazy people
         }
 
-        private void Start() => _originalColor = _spriteRenderer.material.color;
 
         private void OnMouseOver() => OnMouseOverEvent(this);
 
@@ -126,17 +115,59 @@ namespace Duelers.Local.View
 
         private void OnMouseUpAsButton() => OnMouseClickEvent(this);
 
-        public void Unselect()
+
+        private enum TileState
         {
-            _spriteRenderer.sprite = _unselectedTile;
-            _spriteRenderer.color = _defaultColor;
+            Default,
+            Highlight,
+            Attack,
+            Movement,
+            Summon
+
         }
-
-        public void Select()
+        private void EnableTile(TileState state)
         {
-            _spriteRenderer.color = new Color(_defaultColor.r, _defaultColor.g, _defaultColor.b, _defaultColor.a + 0.2f);
 
-            _spriteRenderer.sprite = _selectedTile;
+            switch (state)
+            {
+                case TileState.Highlight:
+                    _highlightTile.SetActive(true);
+                    break;
+                case TileState.Attack:
+                    _attackTile.SetActive(true);
+                    break;
+                case TileState.Summon:
+                    _summonTile.SetActive(true);
+                    break;
+                case TileState.Default:
+                    _defaultTile.SetActive(true);
+                    break;
+                case TileState.Movement:
+                    _movementTile.SetActive(true);
+                    break;
+            }
+        }
+        private void DisableTile(TileState state)
+        {
+
+            switch (state)
+            {
+                case TileState.Highlight:
+                    _highlightTile.SetActive(false);
+                    break;
+                case TileState.Attack:
+                    _attackTile.SetActive(false);
+                    break;
+                case TileState.Summon:
+                    _summonTile.SetActive(false);
+                    break;
+                case TileState.Default:
+                    _defaultTile.SetActive(false);
+                    break;
+                case TileState.Movement:
+                    _movementTile.SetActive(false);
+                    break;
+            }
         }
     }
 }

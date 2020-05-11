@@ -29,6 +29,7 @@ namespace Duelers.Local.View
         public GridTile HandleTile(TileJson tileJson)
         {
             var t = !_tiles.ContainsKey(tileJson.Id) ? Instantiate(tilePrefab, transform) : _tiles[tileJson.Id];
+            t.Awake();
             t.X = tileJson.X;
             t.Y = tileJson.Y;
             t.Id = tileJson.Id;

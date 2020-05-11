@@ -52,7 +52,6 @@ namespace Duelers.Local.Controller
         internal void OnOver(GridTile tileClicked)
         {
             var objectOnTile = tileClicked?.ObjectOnTile;
-            tileClicked.ShowCursorOverTile();
             if (objectOnTile == null)
             {
                 return;
@@ -75,7 +74,7 @@ namespace Duelers.Local.Controller
             foreach (var tile in go.MoveTargets)
             {
                 var t = _grid.GetTile(tile);
-                t.HighlightTile(Color.white);
+                t.ShowMovementTile();
             }
         }
 
@@ -83,14 +82,10 @@ namespace Duelers.Local.Controller
         {
             var objectOnTile = tileClicked?.ObjectOnTile;
 
-            if (_selected.Item2?.MoveTargets.Any(x => x == tileClicked.Id) == true)
-            {
-                tileClicked.HighlightTile(Color.white);
-            }
-            else
-            {
-                tileClicked.HideCursorOnTile();
-            }
+            //if (_selected.Item2?.MoveTargets.Any(x => x == tileClicked.Id) == true)
+            //{
+            //    tileClicked.ShowMovementTile();
+            //}
 
             if (objectOnTile == null)
             {
@@ -113,7 +108,7 @@ namespace Duelers.Local.Controller
             foreach (var tile in go.MoveTargets)
             {
                 var t = _grid.GetTile(tile);
-                t.UnHighlightTile();
+                t.HideMovementTile();
             }
         }
 
@@ -129,7 +124,7 @@ namespace Duelers.Local.Controller
             if (_units.TryGetValue(go?.name ?? "", out var value))
             {
                 _selected = (tileClicked, value);
-                tileClicked.Select();
+                tileClicked.ShowHighlightTile();
                 ShowMovementTiles(go);
             }
         }
@@ -140,7 +135,7 @@ namespace Duelers.Local.Controller
             {
                 return;
             }
-            _selected.Item1.Unselect();
+            _selected.Item1.HideHighlightTile();
             HideMovementTiles(_selected.Item2);
 
             _selected = (null, null);
