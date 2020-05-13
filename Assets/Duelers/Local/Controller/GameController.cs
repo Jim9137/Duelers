@@ -51,12 +51,7 @@ namespace Duelers.Local.Controller
             if (!string.IsNullOrEmpty(message))
                 try
                 {
-
-                    var typeOfMessage =
-                        Enum.TryParse<MessageType>(JsonConvert.DeserializeObject<TypeMessage>(message).Type ?? "NONE",
-                            out var t)
-                            ? t
-                            : MessageType.NONE;
+                    var typeOfMessage = JsonConvert.DeserializeObject<TypeMessage>(message).Type;
 
                     string plist;
                     UnitCard unit;
@@ -106,7 +101,6 @@ namespace Duelers.Local.Controller
                                 }
 
                                 units.Add(newUnit);
-
                             }
 
                             _interface.StartChoice(choiceMessage, units);
@@ -157,7 +151,10 @@ namespace Duelers.Local.Controller
         {
             var newCard = Instantiate(unitCardPrefab);
             var localScale = newCard.transform.localScale;
-            localScale = new Vector3(drawMessageCard.Facing * localScale.x, localScale.y, localScale.z);
+            localScale = new Vector3(
+                drawMessageCard.Facing == 0 ? 1 : drawMessageCard.Facing * localScale.x,
+                localScale.y,
+                localScale.z);
             newCard.transform.localScale = localScale;
             newCard.ParseCardJson(drawMessageCard, plist, _interface.CardPopup);
             newCard.name = drawMessageCard.Id;

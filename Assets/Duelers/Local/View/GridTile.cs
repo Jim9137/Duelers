@@ -8,7 +8,6 @@ using UnityEngine.Tilemaps;
 
 namespace Duelers.Local.View
 {
-
     public class GridTile : MonoBehaviour
     {
         private ITileObject _objectOnTile;
@@ -22,7 +21,6 @@ namespace Duelers.Local.View
         [SerializeField] private GameObject _movementTile;
         [SerializeField] private GameObject _summonTile;
         [SerializeField] private GameObject _defaultTile;
-
 
         private float _sizeX;
         private float _sizeY;
@@ -50,7 +48,6 @@ namespace Duelers.Local.View
             }
         }
 
-
         public int X
         {
             get => _x;
@@ -71,7 +68,6 @@ namespace Duelers.Local.View
             }
         }
 
-
         private void SetUnitCenter(GameObject go)
         {
             if (go == null) return;
@@ -80,10 +76,8 @@ namespace Duelers.Local.View
             go.transform.localScale = new Vector3(Mathf.Sign(go.transform.localScale.x) * 2.5f, 2.5f, 2.5f);
         }
 
-
         private Vector2 TranslateGridToWorld()
         {
-
             var size = _childSprites.FirstOrDefault().GetComponent<SpriteRenderer>().size; // unachk this
             _sizeX = size.x;
             _sizeY = size.y;
@@ -102,19 +96,16 @@ namespace Duelers.Local.View
         public void HideMovementTile() => DisableTile(TileState.Movement);
         public void HideHighlightTile() => DisableTile(TileState.Highlight);
 
-
         public void Awake()
         {
             _childSprites = new GameObject[] { _highlightTile, _defaultTile, _attackTile, _summonTile }; // hack for lazy people
         }
-
 
         private void OnMouseOver() => OnMouseOverEvent(this);
 
         private void OnMouseExit() => OnMouseExitEvent(this);
 
         private void OnMouseUpAsButton() => OnMouseClickEvent(this);
-
 
         private enum TileState
         {
@@ -127,7 +118,6 @@ namespace Duelers.Local.View
         }
         private void EnableTile(TileState state)
         {
-
             switch (state)
             {
                 case TileState.Highlight:
@@ -149,7 +139,6 @@ namespace Duelers.Local.View
         }
         private void DisableTile(TileState state)
         {
-
             switch (state)
             {
                 case TileState.Highlight:

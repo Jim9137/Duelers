@@ -25,7 +25,6 @@ namespace Duelers.Local.Model
             }
         }
 
-
         // TODO: add some fancy glowing things in the future
         private void OnMouseEnter() => OnMouseOverEvent(this);
         private void OnMouseExit() => OnMouseExitEvent(this);

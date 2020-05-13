@@ -22,7 +22,6 @@ namespace Duelers.Local.Controller
             this._grid = _grid;
         }
 
-
         ~UnitController()
         {
             GridTile.OnMouseExitEvent -= OnExit;
@@ -66,7 +65,6 @@ namespace Duelers.Local.Controller
 
             go.ShowPopup();
             ShowMovementTiles(go);
-
         }
 
         private void ShowMovementTiles(UnitCard go)
@@ -102,7 +100,6 @@ namespace Duelers.Local.Controller
 
             HideMovementTiles(go);
         }
-
         private void HideMovementTiles(UnitCard go)
         {
             foreach (var tile in go.MoveTargets)
@@ -139,7 +136,6 @@ namespace Duelers.Local.Controller
             HideMovementTiles(_selected.Item2);
 
             _selected = (null, null);
-
         }
     }
 }

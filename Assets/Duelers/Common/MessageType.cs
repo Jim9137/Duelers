@@ -1,4 +1,4 @@
-namespace Duelers.Local.Model
+namespace Duelers.Common
 {
     public enum MessageType
     {
@@ -7,6 +7,7 @@ namespace Duelers.Local.Model
         CHARACTER,
         CHOICE,
         RESOLVE_CHOICE,
-        CARD
+        CARD,
+        PLAY
     }
 }

@@ -76,7 +76,6 @@ namespace Duelers.Server
             }
         }
 
-
         private async Task<string> Signin()
         {
             var signinType = new SigninMessage(_userName, _password, "PLAIN");
@@ -86,7 +85,6 @@ namespace Duelers.Server
                 new ByteArrayContent(Encoding.ASCII.GetBytes(JsonConvert.SerializeObject(signinType))));
             return await h.Content.ReadAsStringAsync();
         }
-
 
         private async void StartGame(string content)
         {
@@ -127,12 +125,43 @@ namespace Duelers.Server
 
             foreach (var a in actions)
             {
-                var messages = JsonConvert.DeserializeObject<UserChoicesMessage>(a);
-                messages.Token = _userToken;
-                var b = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messages)));
-                await _clientWebSocket.SendAsync(b, WebSocketMessageType.Text, true, _cancellationToken);
+                Debug.Log("Sending message: " + a, this);
+                var type = JsonConvert.DeserializeObject<TypeMessage>(a);
+                switch (type.Type)
+                {
+                    case MessageType.NONE:
+                        break;
+                    case MessageType.TILE:
+                        break;
+                    case MessageType.CHARACTER:
+                        break;
+                    case MessageType.CHOICE:
+                        var r = JsonConvert.DeserializeObject<UserChoicesMessage>(a);
+                        r.Token = _userToken;
+                        await SendMessage(r);
+                        break;
+                    case MessageType.RESOLVE_CHOICE:
+
+
+                        break;
+                    case MessageType.CARD:
+                        break;
+                    case MessageType.PLAY:
+                        var p = JsonConvert.DeserializeObject<PlayMessage>(a);
+                        p.Token = _userToken;
+                        await SendMessage(p);
+
+                        break;
+                }
             }
         }
+
+        private async Task SendMessage(object message)
+        {
+            var b = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message)));
+            await _clientWebSocket.SendAsync(b, WebSocketMessageType.Text, true, _cancellationToken);
+        }
+
         public async Task<string> GetTargets(ResolveTargetRequest resolveTargets)
         {
             if (resolveTargets == null)

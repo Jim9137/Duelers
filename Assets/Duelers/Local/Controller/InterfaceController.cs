@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Duelers.Local.Controller
 {
-    public class InterfaceController : MonoBehaviour
+    public partial class InterfaceController : MonoBehaviour
     {
         [SerializeField] private CardPopup _cardPopup;
         [SerializeField] private Canvas handCanvas;
@@ -20,7 +20,6 @@ namespace Duelers.Local.Controller
         private List<string> messages;
         private string _choiceId;
         public BattleGrid Grid { get; set; }
-        public string Token { get; set; }
         private (HandSlot slot, UnitCard unit) _selected;
         public Dictionary<string, TargetList> Targets = new Dictionary<string, TargetList>();
 
@@ -61,23 +60,27 @@ namespace Duelers.Local.Controller
 
         private void HandleClick(GridTile tile)
         {
-            if(_selected.unit == null)
+            if (_selected.unit == null)
             {
                 return;
             }
             if (Targets[_selected.unit.Id].Ids.Contains(tile.Id))
             {
                 Debug.Log("Summoning unit " + _selected.unit.name);
+                var play = new PlayMessage()
+                {
+                    Targets = new string[] { tile.Id },
+                    Source = _selected.unit.Id
+                };
+                messages.Add(JsonConvert.SerializeObject(play));
             }
-            else
-            {
-                UnselectHandCard();
-            }
-        }
 
+
+            UnselectHandCard();
+        }
         private void UnselectHandCard()
         {
-            if(_selected.unit == null)
+            if (_selected.unit == null)
             {
                 Debug.LogWarning("Trying to unselect null object", this);
                 return;
@@ -139,6 +142,10 @@ namespace Duelers.Local.Controller
 
         public void AddCardToHand(UnitCard unitCard)
         {
+            if(handSlots.Any(x => x.Value?.Id == unitCard.Id))
+            {
+                return;
+            }
             var firstFreeSlot = handSlots.First(x => x.Value == null);
             unitCard.gameObject.transform.parent = firstFreeSlot.Key.gameObject.transform;
             unitCard.gameObject.transform.localPosition = new Vector3(0, 0, 0);

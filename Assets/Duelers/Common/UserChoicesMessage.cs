@@ -2,9 +2,12 @@ using Newtonsoft.Json;
 
 namespace Duelers.Common
 {
-    public class UserChoicesMessage
+    public class UserChoicesMessage : TypeMessage
     {
-        [JsonProperty("type")] public const string Type = "CHOICE";
+        public UserChoicesMessage()
+        {
+            Type = MessageType.CHOICE;
+        }
 
         [JsonProperty("ids")] public string[] Ids { get; set; }
 

@@ -20,7 +20,6 @@ namespace Duelers.Local.Controller
 
         public GameObject GameObject => gameObject;
 
-
         public void ParseCardJson(CardJson drawMessageCard, string plist, CardPopup popup)
         {
             _cardProperties = drawMessageCard;
@@ -31,7 +30,7 @@ namespace Duelers.Local.Controller
         private void AddAnimationsToAnimationController(string plist)
         {
             _animationController.AddPlistFromJson(_cardProperties.SpriteUrl, plist);
-            _animationController.StartAnimation("breathing");
+            _animationController.StartAnimation("idle");
         }
 
         public void StartAnimation(string animation, bool oneShot = false)

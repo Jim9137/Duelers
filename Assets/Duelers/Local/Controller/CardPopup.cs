@@ -11,7 +11,6 @@ public class CardPopup : MonoBehaviour
     [SerializeField] private Text hpText;
     [SerializeField] private Text nameText;
 
-
     public void SetProperties(CardJson card, Sprite sprite)
     {
         if (card == null)
@@ -21,8 +20,8 @@ public class CardPopup : MonoBehaviour
         }
 
         cardSprite.sprite = sprite;
-        attackText.text = card.Attack.ToString();
-        hpText.text = card.Health.ToString();
+        attackText.text = card.Attack?.ToString() ?? "";
+        hpText.text = card.Health?.ToString() ?? "";
         costText.text = card.Cost.ToString();
         descriptionText.text = card.Description;
         nameText.text = card.Name?.ToUpper();

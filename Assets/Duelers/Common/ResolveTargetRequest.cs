@@ -1,5 +1,4 @@
 ﻿
-
 namespace Duelers.Common
 {
     public class ResolveTargetRequest

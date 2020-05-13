@@ -1,3 +1,5 @@
+using Duelers.Common;
+
 namespace Duelers.Local.Model
 {
     public class CharacterMessage
