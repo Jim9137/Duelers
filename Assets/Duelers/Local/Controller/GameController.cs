@@ -30,11 +30,11 @@ namespace Duelers.Local.Controller
             // _selectionController = new SelectionController();
             _unitController = new UnitController(_grid);
             _interface.Grid = _grid;
+            _server.Connect(ProcessMessage);
         }
 
         private void Update()
         {
-            ReceiveMessages();
             SentMessages();
         }
 
@@ -45,9 +45,8 @@ namespace Duelers.Local.Controller
             _server.SendActions(actions);
         }
 
-        private async Task ReceiveMessages()
+        private async Task ProcessMessage(string message)
         {
-            var message = _server.PopMessageFromQueue();
             if (!string.IsNullOrEmpty(message))
                 try
                 {
