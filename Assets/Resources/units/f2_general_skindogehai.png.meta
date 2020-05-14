@@ -1,0 +1,2672 @@
+fileFormatVersion: 2
+guid: 08cf64d4482d80048bca2358100493da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4493001596503481876
+    second: f2_general_skindogehai_0
+  - first:
+      213: -3773576976505228793
+    second: f2_general_skindogehai_1
+  - first:
+      213: 1029118712865085323
+    second: f2_general_skindogehai_2
+  - first:
+      213: -3836238662017620189
+    second: f2_general_skindogehai_3
+  - first:
+      213: 5340631422458188857
+    second: f2_general_skindogehai_4
+  - first:
+      213: 2252989391632400085
+    second: f2_general_skindogehai_5
+  - first:
+      213: -6316093025787417620
+    second: f2_general_skindogehai_6
+  - first:
+      213: 5663394597431032023
+    second: f2_general_skindogehai_7
+  - first:
+      213: -5796241760358711156
+    second: f2_general_skindogehai_8
+  - first:
+      213: 4008292600147389461
+    second: f2_general_skindogehai_9
+  - first:
+      213: -1666608796685871195
+    second: f2_general_skindogehai_10
+  - first:
+      213: 2894254703148957806
+    second: f2_general_skindogehai_11
+  - first:
+      213: -8560193165682712781
+    second: f2_general_skindogehai_12
+  - first:
+      213: -7013190530787719293
+    second: f2_general_skindogehai_13
+  - first:
+      213: 3615422077651759234
+    second: f2_general_skindogehai_14
+  - first:
+      213: 6805578512420501746
+    second: f2_general_skindogehai_15
+  - first:
+      213: 6382401788418953882
+    second: f2_general_skindogehai_16
+  - first:
+      213: -6956680184385716466
+    second: f2_general_skindogehai_17
+  - first:
+      213: -5204801461228611596
+    second: f2_general_skindogehai_18
+  - first:
+      213: 7660213663930431540
+    second: f2_general_skindogehai_19
+  - first:
+      213: -6674720560742966346
+    second: f2_general_skindogehai_20
+  - first:
+      213: 502815658396520817
+    second: f2_general_skindogehai_21
+  - first:
+      213: -7550782197857075446
+    second: f2_general_skindogehai_22
+  - first:
+      213: -8803605746836685190
+    second: f2_general_skindogehai_23
+  - first:
+      213: -4065770354617830698
+    second: f2_general_skindogehai_24
+  - first:
+      213: -6421291046000725693
+    second: f2_general_skindogehai_25
+  - first:
+      213: 4728983668380648325
+    second: f2_general_skindogehai_26
+  - first:
+      213: -554015555292567232
+    second: f2_general_skindogehai_27
+  - first:
+      213: 973570462773489524
+    second: f2_general_skindogehai_28
+  - first:
+      213: 4361396649107945642
+    second: f2_general_skindogehai_29
+  - first:
+      213: 8238024662666938471
+    second: f2_general_skindogehai_30
+  - first:
+      213: -6104860753974715629
+    second: f2_general_skindogehai_31
+  - first:
+      213: 8993801748367540005
+    second: f2_general_skindogehai_32
+  - first:
+      213: -8697438462448143542
+    second: f2_general_skindogehai_33
+  - first:
+      213: 8246337252454643999
+    second: f2_general_skindogehai_34
+  - first:
+      213: -3102289011834406483
+    second: f2_general_skindogehai_35
+  - first:
+      213: 951068629677228228
+    second: f2_general_skindogehai_36
+  - first:
+      213: -7471324544319239659
+    second: f2_general_skindogehai_37
+  - first:
+      213: -6013627726743353286
+    second: f2_general_skindogehai_38
+  - first:
+      213: 3446665321412618650
+    second: f2_general_skindogehai_39
+  - first:
+      213: 7521176116730919736
+    second: f2_general_skindogehai_40
+  - first:
+      213: 8457231805557567970
+    second: f2_general_skindogehai_41
+  - first:
+      213: -140968165059488184
+    second: f2_general_skindogehai_42
+  - first:
+      213: 8964161606330377524
+    second: f2_general_skindogehai_43
+  - first:
+      213: -9062295214572546198
+    second: f2_general_skindogehai_44
+  - first:
+      213: 4359267701421498694
+    second: f2_general_skindogehai_45
+  - first:
+      213: -8820695683341747730
+    second: f2_general_skindogehai_46
+  - first:
+      213: 2147918551841541343
+    second: f2_general_skindogehai_47
+  - first:
+      213: -3978043654386240464
+    second: f2_general_skindogehai_48
+  - first:
+      213: -7315740197522062082
+    second: f2_general_skindogehai_49
+  - first:
+      213: -7551825010826527004
+    second: f2_general_skindogehai_50
+  - first:
+      213: 7857789336133052754
+    second: f2_general_skindogehai_51
+  - first:
+      213: -8457514337035335656
+    second: f2_general_skindogehai_52
+  - first:
+      213: -8037383674705537196
+    second: f2_general_skindogehai_53
+  - first:
+      213: 3075678724462776519
+    second: f2_general_skindogehai_54
+  - first:
+      213: -7639960033205281928
+    second: f2_general_skindogehai_55
+  - first:
+      213: -5733844679862210776
+    second: f2_general_skindogehai_56
+  - first:
+      213: 4103473745162611929
+    second: f2_general_skindogehai_57
+  - first:
+      213: 7151003302579365679
+    second: f2_general_skindogehai_58
+  - first:
+      213: 8897476866107510270
+    second: f2_general_skindogehai_59
+  - first:
+      213: -1034502265897497321
+    second: f2_general_skindogehai_60
+  - first:
+      213: 575799292305977890
+    second: f2_general_skindogehai_61
+  - first:
+      213: 5748374293646213698
+    second: f2_general_skindogehai_62
+  - first:
+      213: -1465669523595496372
+    second: f2_general_skindogehai_63
+  - first:
+      213: -7063217351618833302
+    second: f2_general_skindogehai_64
+  - first:
+      213: 8935080242112143888
+    second: f2_general_skindogehai_65
+  - first:
+      213: 3162434151483743354
+    second: f2_general_skindogehai_66
+  - first:
+      213: 1603453447801699244
+    second: f2_general_skindogehai_67
+  - first:
+      213: 6479241512434415942
+    second: f2_general_skindogehai_68
+  - first:
+      213: -5652406137522086164
+    second: f2_general_skindogehai_69
+  - first:
+      213: -742632090837318317
+    second: f2_general_skindogehai_70
+  - first:
+      213: 3156447878785671381
+    second: f2_general_skindogehai_71
+  - first:
+      213: -8146256713337283482
+    second: f2_general_skindogehai_72
+  - first:
+      213: -5745795581449934438
+    second: f2_general_skindogehai_73
+  - first:
+      213: 5649116783011841552
+    second: f2_general_skindogehai_74
+  - first:
+      213: -1778887028031255852
+    second: f2_general_skindogehai_75
+  - first:
+      213: 5747340628667859586
+    second: f2_general_skindogehai_76
+  - first:
+      213: 8852838184073989839
+    second: f2_general_skindogehai_77
+  - first:
+      213: -7273646126204630534
+    second: f2_general_skindogehai_78
+  - first:
+      213: -4460336079971596638
+    second: f2_general_skindogehai_79
+  - first:
+      213: 693768607554557267
+    second: f2_general_skindogehai_80
+  - first:
+      213: -6743776215263345794
+    second: f2_general_skindogehai_81
+  - first:
+      213: 7574881704270706706
+    second: f2_general_skindogehai_82
+  - first:
+      213: 5889595210659275301
+    second: f2_general_skindogehai_83
+  - first:
+      213: 661332269291107199
+    second: f2_general_skindogehai_84
+  - first:
+      213: -1301728931443771937
+    second: f2_general_skindogehai_85
+  - first:
+      213: 2270415592298016845
+    second: f2_general_skindogehai_86
+  - first:
+      213: 7735000762068642841
+    second: f2_general_skindogehai_87
+  - first:
+      213: 8101921102614701107
+    second: f2_general_skindogehai_88
+  - first:
+      213: 785737917137318341
+    second: f2_general_skindogehai_89
+  - first:
+      213: -1087714411914874673
+    second: f2_general_skindogehai_90
+  - first:
+      213: 1472643764547248771
+    second: f2_general_skindogehai_91
+  - first:
+      213: -310721307229056479
+    second: f2_general_skindogehai_92
+  - first:
+      213: 3714877742241883276
+    second: f2_general_skindogehai_93
+  - first:
+      213: -6022290903734257169
+    second: f2_general_skindogehai_94
+  - first:
+      213: -4938961631823246345
+    second: f2_general_skindogehai_95
+  - first:
+      213: -7579419859463431254
+    second: f2_general_skindogehai_96
+  - first:
+      213: 1973156819620916199
+    second: f2_general_skindogehai_97
+  - first:
+      213: -7321463637182222980
+    second: f2_general_skindogehai_98
+  - first:
+      213: 763531732346695574
+    second: f2_general_skindogehai_99
+  - first:
+      213: 2525765218914814506
+    second: f2_general_skindogehai_100
+  - first:
+      213: -4254368743158989503
+    second: f2_general_skindogehai_101
+  - first:
+      213: -8066030809420742272
+    second: f2_general_skindogehai_102
+  - first:
+      213: -6290737061842939417
+    second: f2_general_skindogehai_103
+  - first:
+      213: 7636597043942923253
+    second: f2_general_skindogehai_104
+  - first:
+      213: 2564848944673143183
+    second: f2_general_skindogehai_105
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: f2_general_skindogehai_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 930
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1a5295ad6a5a1c0800000000000000
+      internalID: -4493001596503481876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 930
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70230deabbf81abc0800000000000000
+      internalID: -3773576976505228793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 930
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87d700540a284e00800000000000000
+      internalID: 1029118712865085323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_3
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 930
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327e1dc1341f2cac0800000000000000
+      internalID: -3836238662017620189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_4
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 930
+        width: 58
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934d8eb9bfbbd1a40800000000000000
+      internalID: 5340631422458188857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_5
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 965
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5def8f23ae9344f10800000000000000
+      internalID: 2252989391632400085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_6
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 930
+        width: 51
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb6e9d6bdab858a0800000000000000
+      internalID: -6316093025787417620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_7
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 930
+        width: 51
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d83eb2616b689e40800000000000000
+      internalID: 5663394597431032023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_8
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 940
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80c88924dc9f8fa0800000000000000
+      internalID: -5796241760358711156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_9
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 941
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cac9b02e050a730800000000000000
+      internalID: 4008292600147389461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_10
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 942
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a75ff521240fd8e0800000000000000
+      internalID: -1666608796685871195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_11
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 942
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6082be61557a2820800000000000000
+      internalID: 2894254703148957806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_12
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 930
+        width: 47
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f51ce6ba5143980800000000000000
+      internalID: -8560193165682712781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_13
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 936
+        width: 58
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387c346ae542cae90800000000000000
+      internalID: -7013190530787719293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_14
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 819
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280b98b693f8c2230800000000000000
+      internalID: 3615422077651759234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_15
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 819
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8fadb7995427e50800000000000000
+      internalID: 6805578512420501746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_16
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 819
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9297847c98d29850800000000000000
+      internalID: 6382401788418953882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_17
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 819
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fb0b9fa38e47f90800000000000000
+      internalID: -6956680184385716466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 819
+        width: 65
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7d801b5a4d4c7b0800000000000000
+      internalID: -5204801461228611596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_19
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 855
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438ba26edbb8e4a60800000000000000
+      internalID: 7660213663930431540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_20
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 819
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb5be1a301ae53a0800000000000000
+      internalID: -6674720560742966346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_21
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 819
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1719a326d2c5af600800000000000000
+      internalID: 502815658396520817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_22
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 830
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fb268c89b363790800000000000000
+      internalID: -7550782197857075446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_23
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 831
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e363d773f43d580800000000000000
+      internalID: -8803605746836685190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_24
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 831
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2b0b2676b7397c0800000000000000
+      internalID: -4065770354617830698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_25
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 819
+        width: 49
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341fabba0ddf2e6a0800000000000000
+      internalID: -6421291046000725693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_26
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 819
+        width: 57
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583c3765799b0a140800000000000000
+      internalID: 4728983668380648325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_27
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 708
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049eebaa9cdbf48f0800000000000000
+      internalID: -554015555292567232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_28
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 708
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f2d6d7d21d28d00800000000000000
+      internalID: 973570462773489524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_29
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 707
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa878aa052bc68c30800000000000000
+      internalID: 4361396649107945642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_30
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 708
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7688b25a8c7535270800000000000000
+      internalID: 8238024662666938471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_31
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 708
+        width: 73
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b1d1c3d7d274ba0800000000000000
+      internalID: -6104860753974715629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_32
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 708
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ffbb7f90760dc70800000000000000
+      internalID: 8993801748367540005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_33
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 724
+        width: 55
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4375f5accd7c4780800000000000000
+      internalID: -8697438462448143542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_34
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 741
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1931a64a00e07270800000000000000
+      internalID: 8246337252454643999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_35
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 708
+        width: 57
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da93303949472f4d0800000000000000
+      internalID: -3102289011834406483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_36
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 708
+        width: 55
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0cde431efd23d00800000000000000
+      internalID: 951068629677228228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_37
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 597
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ac13669e5805890800000000000000
+      internalID: -7471324544319239659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 597
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38c500b17d4b8ca0800000000000000
+      internalID: -6013627726743353286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_39
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 597
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99e47e39d305df20800000000000000
+      internalID: 3446665321412618650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_40
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 597
+        width: 51
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bf5ea44d5906860800000000000000
+      internalID: 7521176116730919736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_41
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 595
+        width: 55
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1f461d48f1e5570800000000000000
+      internalID: 8457231805557567970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_42
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 597
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8469df4633e2b0ef0800000000000000
+      internalID: -140968165059488184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_43
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 626
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435648e9c79176c70800000000000000
+      internalID: 8964161606330377524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_44
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 621
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a675ea534824c3280800000000000000
+      internalID: -9062295214572546198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_45
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 607
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641ef08c0ea3f7c30800000000000000
+      internalID: 4359267701421498694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_46
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 608
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9f7929208969580800000000000000
+      internalID: -8820695683341747730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_47
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 609
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc8cf0fa80fecd10800000000000000
+      internalID: 2147918551841541343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_48
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 610
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034bf477f562bc8c0800000000000000
+      internalID: -3978043654386240464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_49
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 596
+        width: 45
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4c6a10d05497a90800000000000000
+      internalID: -7315740197522062082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_50
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 597
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee36c7f927823790800000000000000
+      internalID: -7551825010826527004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_51
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 486
+        width: 42
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2592014d4c97c0d60800000000000000
+      internalID: 7857789336133052754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_52
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 486
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8184c32358fd0aa80800000000000000
+      internalID: -8457514337035335656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_53
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 486
+        width: 54
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45717a9b12a757090800000000000000
+      internalID: -8037383674705537196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_54
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 486
+        width: 58
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c094d611810faa20800000000000000
+      internalID: 3075678724462776519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_55
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 486
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b1e9af3d869f590800000000000000
+      internalID: -7639960033205281928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_56
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 516
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82fac8394aa4d60b0800000000000000
+      internalID: -5733844679862210776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_57
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 485
+        width: 58
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc2f8d41a772f830800000000000000
+      internalID: 4103473745162611929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_58
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 496
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2763e5bd977d3360800000000000000
+      internalID: 7151003302579365679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_59
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 497
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd0891a1103a7b70800000000000000
+      internalID: 8897476866107510270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_60
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 498
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71dc7d19ba5b4a1f0800000000000000
+      internalID: -1034502265897497321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_61
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 499
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222b1d7d766adf700800000000000000
+      internalID: 575799292305977890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_62
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 482
+        width: 59
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24205c0c6f356cf40800000000000000
+      internalID: 5748374293646213698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_63
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 484
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4479ff6555e8abe0800000000000000
+      internalID: -1465669523595496372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_64
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 375
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a645261cd396afd90800000000000000
+      internalID: -7063217351618833302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_65
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 375
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012a4bed328cffb70800000000000000
+      internalID: 8935080242112143888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_66
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 375
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c90c00b1933eb20800000000000000
+      internalID: 3162434151483743354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_67
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 375
+        width: 65
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab78125a6c904610800000000000000
+      internalID: 1603453447801699244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_68
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 375
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6493e9ab3d3eae950800000000000000
+      internalID: 6479241512434415942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_69
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 403
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee12cec09e9e81b0800000000000000
+      internalID: -5652406137522086164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_70
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 375
+        width: 55
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35506da4c04a1b5f0800000000000000
+      internalID: -742632090837318317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_71
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 386
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d02e074f94fdcb20800000000000000
+      internalID: 3156447878785671381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_72
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 387
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cd3601eaea2fe80800000000000000
+      internalID: -8146256713337283482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_73
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 388
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99eaa77c55d240b0800000000000000
+      internalID: -5745795581449934438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_74
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 371
+        width: 60
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0164e1aa8c1b56e40800000000000000
+      internalID: 5649116783011841552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_75
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 373
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da85a64caf1057e0800000000000000
+      internalID: -1778887028031255852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_76
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 373
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2820beed9d7a2cf40800000000000000
+      internalID: 5747340628667859586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_77
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 264
+        width: 44
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce8ebf8c699bda70800000000000000
+      internalID: 8852838184073989839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_78
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 264
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af94da9b261de0b90800000000000000
+      internalID: -7273646126204630534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_79
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 264
+        width: 53
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a64f6697f3b912c0800000000000000
+      internalID: -4460336079971596638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_80
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 264
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3555b917fd2c0a900800000000000000
+      internalID: 693768607554557267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_81
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 264
+        width: 39
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e730084234b4962a0800000000000000
+      internalID: -6743776215263345794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_82
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 291
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21839aec6c26f1960800000000000000
+      internalID: 7574881704270706706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_83
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 262
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5222032c3ab0cb150800000000000000
+      internalID: 5889595210659275301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_84
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 284
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73799de1368d2900800000000000000
+      internalID: 661332269291107199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_85
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 261
+        width: 62
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5f1770f645fede0800000000000000
+      internalID: -1301728931443771937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_86
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 153
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d407e67b3f2228f10800000000000000
+      internalID: 2270415592298016845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_87
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 153
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c2a78163e385b60800000000000000
+      internalID: 7735000762068642841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_88
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 153
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3342797215ecf6070800000000000000
+      internalID: 8101921102614701107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_89
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 153
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1768df87087ea00800000000000000
+      internalID: 785737917137318341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_90
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 153
+        width: 72
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0bdbc5189a7e0f0800000000000000
+      internalID: -1087714411914874673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_91
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 153
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382688293b1ef6410800000000000000
+      internalID: 1472643764547248771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_92
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 178
+        width: 42
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122977a0e9810bbf0800000000000000
+      internalID: -310721307229056479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_93
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 151
+        width: 57
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c842552df95ed8330800000000000000
+      internalID: 3714877742241883276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_94
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 42
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe97adc94568c6ca0800000000000000
+      internalID: -6022290903734257169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_95
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 42
+        width: 51
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb44e74098457bb0800000000000000
+      internalID: -4938961631823246345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_96
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 42
+        width: 66
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab14299bcd70d690800000000000000
+      internalID: -7579419859463431254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_97
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 42
+        width: 48
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebe4a75caf026b10800000000000000
+      internalID: 1973156819620916199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_98
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 40
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d60dddc9fe46a90800000000000000
+      internalID: -7321463637182222980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_99
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 42
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f6341b01c989a00800000000000000
+      internalID: 763531732346695574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_100
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 65
+        width: 54
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a4473a5125d0320800000000000000
+      internalID: 2525765218914814506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_101
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 42
+        width: 58
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14dbb703b2275f4c0800000000000000
+      internalID: -4254368743158989503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_102
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 52
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081ce19e6b3bf0090800000000000000
+      internalID: -8066030809420742272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_103
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 53
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e19775d8ffc2b8a0800000000000000
+      internalID: -6290737061842939417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_104
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 54
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb14011d84aaf960800000000000000
+      internalID: 7636597043942923253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f2_general_skindogehai_105
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 54
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8937c9a68c289320800000000000000
+      internalID: 2564848944673143183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

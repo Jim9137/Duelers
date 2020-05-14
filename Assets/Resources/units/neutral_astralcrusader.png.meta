@@ -1,0 +1,3044 @@
+fileFormatVersion: 2
+guid: f901c819399fc1b44a7da35e68ce403c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7218332423367198462
+    second: neutral_astralcrusader_0
+  - first:
+      213: 6509541693898210672
+    second: neutral_astralcrusader_1
+  - first:
+      213: 8299226739996288120
+    second: neutral_astralcrusader_2
+  - first:
+      213: -1137290595377071795
+    second: neutral_astralcrusader_3
+  - first:
+      213: -8499218417405120023
+    second: neutral_astralcrusader_4
+  - first:
+      213: 8868074748899637755
+    second: neutral_astralcrusader_5
+  - first:
+      213: 5437369998774851761
+    second: neutral_astralcrusader_6
+  - first:
+      213: -2594445504568935307
+    second: neutral_astralcrusader_7
+  - first:
+      213: -8530838382921271567
+    second: neutral_astralcrusader_8
+  - first:
+      213: -4877111260530931017
+    second: neutral_astralcrusader_9
+  - first:
+      213: -7687955661299054084
+    second: neutral_astralcrusader_10
+  - first:
+      213: 6346128475036209589
+    second: neutral_astralcrusader_11
+  - first:
+      213: -1682549893881451547
+    second: neutral_astralcrusader_12
+  - first:
+      213: 8845148524169984160
+    second: neutral_astralcrusader_13
+  - first:
+      213: -7006777636747327152
+    second: neutral_astralcrusader_14
+  - first:
+      213: 3315709944157575908
+    second: neutral_astralcrusader_15
+  - first:
+      213: 952271827069089532
+    second: neutral_astralcrusader_16
+  - first:
+      213: 3326774815951620566
+    second: neutral_astralcrusader_17
+  - first:
+      213: -1157510906606237274
+    second: neutral_astralcrusader_18
+  - first:
+      213: 4994436285346596359
+    second: neutral_astralcrusader_19
+  - first:
+      213: 8586687759857850084
+    second: neutral_astralcrusader_20
+  - first:
+      213: 3822006037436864635
+    second: neutral_astralcrusader_21
+  - first:
+      213: -2887289237478995368
+    second: neutral_astralcrusader_22
+  - first:
+      213: -6128110954336970054
+    second: neutral_astralcrusader_23
+  - first:
+      213: 1456118474986814478
+    second: neutral_astralcrusader_24
+  - first:
+      213: -7678355935274128519
+    second: neutral_astralcrusader_25
+  - first:
+      213: -8493019921372338701
+    second: neutral_astralcrusader_26
+  - first:
+      213: -8059766585372590477
+    second: neutral_astralcrusader_27
+  - first:
+      213: -4239308653627543821
+    second: neutral_astralcrusader_28
+  - first:
+      213: 3251286087438988177
+    second: neutral_astralcrusader_29
+  - first:
+      213: 7484957966739094637
+    second: neutral_astralcrusader_30
+  - first:
+      213: -8307533831001861797
+    second: neutral_astralcrusader_31
+  - first:
+      213: 5081861054957279644
+    second: neutral_astralcrusader_32
+  - first:
+      213: 964782582500235055
+    second: neutral_astralcrusader_33
+  - first:
+      213: 4430053394523358135
+    second: neutral_astralcrusader_34
+  - first:
+      213: 3024498397387666989
+    second: neutral_astralcrusader_35
+  - first:
+      213: 3458278927651485827
+    second: neutral_astralcrusader_36
+  - first:
+      213: 4203016394368789041
+    second: neutral_astralcrusader_37
+  - first:
+      213: 7125030580485460034
+    second: neutral_astralcrusader_38
+  - first:
+      213: 4189278432339727068
+    second: neutral_astralcrusader_39
+  - first:
+      213: -9141160892983443747
+    second: neutral_astralcrusader_40
+  - first:
+      213: -6332072737068533274
+    second: neutral_astralcrusader_41
+  - first:
+      213: -1017672849318370463
+    second: neutral_astralcrusader_42
+  - first:
+      213: 5662175241595356488
+    second: neutral_astralcrusader_43
+  - first:
+      213: 7484569572884165634
+    second: neutral_astralcrusader_44
+  - first:
+      213: 9065621376756964964
+    second: neutral_astralcrusader_45
+  - first:
+      213: 4083444224232942742
+    second: neutral_astralcrusader_46
+  - first:
+      213: -6087286559760773552
+    second: neutral_astralcrusader_47
+  - first:
+      213: -682172213221360720
+    second: neutral_astralcrusader_48
+  - first:
+      213: -5558454017371778817
+    second: neutral_astralcrusader_49
+  - first:
+      213: -3922552705861692944
+    second: neutral_astralcrusader_50
+  - first:
+      213: 830317229429856089
+    second: neutral_astralcrusader_51
+  - first:
+      213: -5728668464383628602
+    second: neutral_astralcrusader_52
+  - first:
+      213: -3902846010587166456
+    second: neutral_astralcrusader_53
+  - first:
+      213: 7625258532758729166
+    second: neutral_astralcrusader_54
+  - first:
+      213: -3288938966186013517
+    second: neutral_astralcrusader_55
+  - first:
+      213: -6731270545952679207
+    second: neutral_astralcrusader_56
+  - first:
+      213: -539927226033207048
+    second: neutral_astralcrusader_57
+  - first:
+      213: 6770223762529813836
+    second: neutral_astralcrusader_58
+  - first:
+      213: -5915504041775191673
+    second: neutral_astralcrusader_59
+  - first:
+      213: -5028378651426436948
+    second: neutral_astralcrusader_60
+  - first:
+      213: 1984431461392136510
+    second: neutral_astralcrusader_61
+  - first:
+      213: 5231357995290257350
+    second: neutral_astralcrusader_62
+  - first:
+      213: -625366245669093325
+    second: neutral_astralcrusader_63
+  - first:
+      213: 7843979118985923986
+    second: neutral_astralcrusader_64
+  - first:
+      213: -5491168905683479514
+    second: neutral_astralcrusader_65
+  - first:
+      213: -7668883950960420657
+    second: neutral_astralcrusader_66
+  - first:
+      213: 1800814888522535741
+    second: neutral_astralcrusader_67
+  - first:
+      213: -1505081656920271696
+    second: neutral_astralcrusader_68
+  - first:
+      213: 5483881726150311477
+    second: neutral_astralcrusader_69
+  - first:
+      213: 1589444536548586654
+    second: neutral_astralcrusader_70
+  - first:
+      213: -1587108131252118850
+    second: neutral_astralcrusader_71
+  - first:
+      213: -4346830170253591624
+    second: neutral_astralcrusader_72
+  - first:
+      213: -1075972284655060338
+    second: neutral_astralcrusader_73
+  - first:
+      213: -2842556230013458493
+    second: neutral_astralcrusader_74
+  - first:
+      213: -1768678456884894820
+    second: neutral_astralcrusader_75
+  - first:
+      213: 4885586112194037540
+    second: neutral_astralcrusader_76
+  - first:
+      213: 9053306221626218415
+    second: neutral_astralcrusader_77
+  - first:
+      213: -916607777316634864
+    second: neutral_astralcrusader_78
+  - first:
+      213: -27884646034854055
+    second: neutral_astralcrusader_79
+  - first:
+      213: -6225026311082644518
+    second: neutral_astralcrusader_80
+  - first:
+      213: -4922150073951086829
+    second: neutral_astralcrusader_81
+  - first:
+      213: 7906772748117401007
+    second: neutral_astralcrusader_82
+  - first:
+      213: 545562327426270124
+    second: neutral_astralcrusader_83
+  - first:
+      213: -5663463765611021582
+    second: neutral_astralcrusader_84
+  - first:
+      213: 1048666374911882012
+    second: neutral_astralcrusader_85
+  - first:
+      213: -4451645736585608344
+    second: neutral_astralcrusader_86
+  - first:
+      213: -3447305022361523176
+    second: neutral_astralcrusader_87
+  - first:
+      213: 4893045718552796340
+    second: neutral_astralcrusader_88
+  - first:
+      213: -6755439762283041296
+    second: neutral_astralcrusader_89
+  - first:
+      213: 4549547761816938948
+    second: neutral_astralcrusader_90
+  - first:
+      213: -1150791013254929676
+    second: neutral_astralcrusader_91
+  - first:
+      213: -741061705335305650
+    second: neutral_astralcrusader_92
+  - first:
+      213: 8539450466430839895
+    second: neutral_astralcrusader_93
+  - first:
+      213: -5553449406531021899
+    second: neutral_astralcrusader_94
+  - first:
+      213: -2109536799521707950
+    second: neutral_astralcrusader_95
+  - first:
+      213: -5995419708570147324
+    second: neutral_astralcrusader_96
+  - first:
+      213: 1475886407545141175
+    second: neutral_astralcrusader_97
+  - first:
+      213: -1643531839600284921
+    second: neutral_astralcrusader_98
+  - first:
+      213: 1740102894019223023
+    second: neutral_astralcrusader_99
+  - first:
+      213: 4478439722748609991
+    second: neutral_astralcrusader_100
+  - first:
+      213: 5891146180646559030
+    second: neutral_astralcrusader_101
+  - first:
+      213: -6263786534862115770
+    second: neutral_astralcrusader_102
+  - first:
+      213: 3129878763098898113
+    second: neutral_astralcrusader_103
+  - first:
+      213: 815473086634042457
+    second: neutral_astralcrusader_104
+  - first:
+      213: -6307076293846520801
+    second: neutral_astralcrusader_105
+  - first:
+      213: 6272341367665496878
+    second: neutral_astralcrusader_106
+  - first:
+      213: -5417290717233705289
+    second: neutral_astralcrusader_107
+  - first:
+      213: -4925537809486423377
+    second: neutral_astralcrusader_0
+  - first:
+      213: -8029030421155276339
+    second: neutral_astralcrusader_1
+  - first:
+      213: 9077849447881643986
+    second: neutral_astralcrusader_2
+  - first:
+      213: 5619244427454546285
+    second: neutral_astralcrusader_3
+  - first:
+      213: -4435786194322641602
+    second: neutral_astralcrusader_4
+  - first:
+      213: 2732446345261336903
+    second: neutral_astralcrusader_5
+  - first:
+      213: 5867414324366926126
+    second: neutral_astralcrusader_6
+  - first:
+      213: 3473809971441511006
+    second: neutral_astralcrusader_7
+  - first:
+      213: 5839916156773376638
+    second: neutral_astralcrusader_8
+  - first:
+      213: 810809085333988321
+    second: neutral_astralcrusader_9
+  - first:
+      213: 8636774435653147920
+    second: neutral_astralcrusader_10
+  - first:
+      213: 992594270229108448
+    second: neutral_astralcrusader_11
+  - first:
+      213: -9073947455407938191
+    second: neutral_astralcrusader_12
+  - first:
+      213: 1491204879718724042
+    second: neutral_astralcrusader_13
+  - first:
+      213: -676018575258117757
+    second: neutral_astralcrusader_14
+  - first:
+      213: 7125816661263904202
+    second: neutral_astralcrusader_15
+  - first:
+      213: 7423938915092615418
+    second: neutral_astralcrusader_16
+  - first:
+      213: 7541082536560451427
+    second: neutral_astralcrusader_17
+  - first:
+      213: 3475757790858275435
+    second: neutral_astralcrusader_18
+  - first:
+      213: 935714416792901994
+    second: neutral_astralcrusader_19
+  - first:
+      213: 4133498118338026411
+    second: neutral_astralcrusader_20
+  - first:
+      213: -8661692231389544835
+    second: neutral_astralcrusader_21
+  - first:
+      213: -2420665082545483413
+    second: neutral_astralcrusader_22
+  - first:
+      213: 2846415463624102394
+    second: neutral_astralcrusader_23
+  - first:
+      213: 8085199579698171396
+    second: neutral_astralcrusader_24
+  - first:
+      213: 3629835351908606432
+    second: neutral_astralcrusader_25
+  - first:
+      213: -7120391926956890789
+    second: neutral_astralcrusader_26
+  - first:
+      213: 3393168142778695278
+    second: neutral_astralcrusader_27
+  - first:
+      213: -8595013746559372310
+    second: neutral_astralcrusader_28
+  - first:
+      213: 7587964835254259979
+    second: neutral_astralcrusader_29
+  - first:
+      213: -3023860803639712340
+    second: neutral_astralcrusader_30
+  - first:
+      213: 7424380266761634908
+    second: neutral_astralcrusader_31
+  - first:
+      213: -4194339689500430265
+    second: neutral_astralcrusader_32
+  - first:
+      213: 6264635456204511565
+    second: neutral_astralcrusader_33
+  - first:
+      213: 7300113136798443351
+    second: neutral_astralcrusader_34
+  - first:
+      213: 4973479438804834086
+    second: neutral_astralcrusader_35
+  - first:
+      213: -4474779542425302476
+    second: neutral_astralcrusader_36
+  - first:
+      213: 8042024836143875375
+    second: neutral_astralcrusader_37
+  - first:
+      213: -2731890423628258554
+    second: neutral_astralcrusader_38
+  - first:
+      213: -2093818925014506022
+    second: neutral_astralcrusader_39
+  - first:
+      213: -3728343349878858977
+    second: neutral_astralcrusader_40
+  - first:
+      213: -879076518756113421
+    second: neutral_astralcrusader_41
+  - first:
+      213: 9076034159791375399
+    second: neutral_astralcrusader_42
+  - first:
+      213: -3127640944964617469
+    second: neutral_astralcrusader_43
+  - first:
+      213: 5509647909662598441
+    second: neutral_astralcrusader_44
+  - first:
+      213: -937059725162144728
+    second: neutral_astralcrusader_45
+  - first:
+      213: -6426356144797949412
+    second: neutral_astralcrusader_46
+  - first:
+      213: -5142216797180702652
+    second: neutral_astralcrusader_47
+  - first:
+      213: -4936648324085824171
+    second: neutral_astralcrusader_48
+  - first:
+      213: -7867213239050751669
+    second: neutral_astralcrusader_49
+  - first:
+      213: -1507148690695830535
+    second: neutral_astralcrusader_50
+  - first:
+      213: -7504750125374091042
+    second: neutral_astralcrusader_51
+  - first:
+      213: 7658327503825401998
+    second: neutral_astralcrusader_52
+  - first:
+      213: 6878317301722584823
+    second: neutral_astralcrusader_53
+  - first:
+      213: -7348442866357195856
+    second: neutral_astralcrusader_54
+  - first:
+      213: -2175117131195638859
+    second: neutral_astralcrusader_55
+  - first:
+      213: -3200928276068088409
+    second: neutral_astralcrusader_56
+  - first:
+      213: 2869678695733902523
+    second: neutral_astralcrusader_57
+  - first:
+      213: 9123694162413147422
+    second: neutral_astralcrusader_58
+  - first:
+      213: 4909597267699776969
+    second: neutral_astralcrusader_59
+  - first:
+      213: 180839908657684743
+    second: neutral_astralcrusader_60
+  - first:
+      213: 868856016363170056
+    second: neutral_astralcrusader_61
+  - first:
+      213: 8043309630241303086
+    second: neutral_astralcrusader_62
+  - first:
+      213: -5308777655212153804
+    second: neutral_astralcrusader_63
+  - first:
+      213: -8345129752236974009
+    second: neutral_astralcrusader_64
+  - first:
+      213: 8126254709363899129
+    second: neutral_astralcrusader_65
+  - first:
+      213: -2991053377277333162
+    second: neutral_astralcrusader_66
+  - first:
+      213: 5997989554579615944
+    second: neutral_astralcrusader_67
+  - first:
+      213: -7362046563001551700
+    second: neutral_astralcrusader_68
+  - first:
+      213: -5817360814292564364
+    second: neutral_astralcrusader_69
+  - first:
+      213: 6640885447079246080
+    second: neutral_astralcrusader_70
+  - first:
+      213: -2669294560607281422
+    second: neutral_astralcrusader_71
+  - first:
+      213: 4521216714382568213
+    second: neutral_astralcrusader_72
+  - first:
+      213: -3806500510162727879
+    second: neutral_astralcrusader_73
+  - first:
+      213: -8361380442663502439
+    second: neutral_astralcrusader_74
+  - first:
+      213: 5622730188342355443
+    second: neutral_astralcrusader_75
+  - first:
+      213: -619694282425211299
+    second: neutral_astralcrusader_76
+  - first:
+      213: 4188524796139768949
+    second: neutral_astralcrusader_77
+  - first:
+      213: -9108037552338044198
+    second: neutral_astralcrusader_78
+  - first:
+      213: -813496620109101239
+    second: neutral_astralcrusader_79
+  - first:
+      213: 4790829265318359558
+    second: neutral_astralcrusader_80
+  - first:
+      213: -3112183377459750421
+    second: neutral_astralcrusader_81
+  - first:
+      213: -5585561986635376402
+    second: neutral_astralcrusader_82
+  - first:
+      213: -2278573735217125236
+    second: neutral_astralcrusader_83
+  - first:
+      213: -4564532621228082665
+    second: neutral_astralcrusader_84
+  - first:
+      213: -7691097682669132228
+    second: neutral_astralcrusader_85
+  - first:
+      213: 867748157564500433
+    second: neutral_astralcrusader_86
+  - first:
+      213: -8952842331075045482
+    second: neutral_astralcrusader_87
+  - first:
+      213: -6555909878588541753
+    second: neutral_astralcrusader_88
+  - first:
+      213: 5194780326369815913
+    second: neutral_astralcrusader_89
+  - first:
+      213: 7194518038863694854
+    second: neutral_astralcrusader_90
+  - first:
+      213: -1106356789641666552
+    second: neutral_astralcrusader_91
+  - first:
+      213: -4831351321488951067
+    second: neutral_astralcrusader_92
+  - first:
+      213: -6666800120333796445
+    second: neutral_astralcrusader_93
+  - first:
+      213: -3012205941789102384
+    second: neutral_astralcrusader_94
+  - first:
+      213: 3290795368101069121
+    second: neutral_astralcrusader_95
+  - first:
+      213: -4969665259864404914
+    second: neutral_astralcrusader_96
+  - first:
+      213: 3666788330982434091
+    second: neutral_astralcrusader_97
+  - first:
+      213: -5555239839080771120
+    second: neutral_astralcrusader_98
+  - first:
+      213: 2208896915550979876
+    second: neutral_astralcrusader_99
+  - first:
+      213: 8856029571478539749
+    second: neutral_astralcrusader_100
+  - first:
+      213: -511657677622253278
+    second: neutral_astralcrusader_101
+  - first:
+      213: -2946692816161165032
+    second: neutral_astralcrusader_102
+  - first:
+      213: -7088696048123442600
+    second: neutral_astralcrusader_103
+  - first:
+      213: 8743508767513259468
+    second: neutral_astralcrusader_104
+  - first:
+      213: 1695192245984862077
+    second: neutral_astralcrusader_105
+  - first:
+      213: -8785608808708166741
+    second: neutral_astralcrusader_106
+  - first:
+      213: 6722404269689160968
+    second: neutral_astralcrusader_107
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: neutral_astralcrusader_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 940
+        width: 75
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa5ec97579f4abb0800000000000000
+      internalID: -4925537809486423377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 940
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc91c302f57239090800000000000000
+      internalID: -8029030421155276339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 943
+        width: 66
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d71671f9fffafd70800000000000000
+      internalID: 9077849447881643986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_3
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 978
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d618584e8019bfd40800000000000000
+      internalID: 5619244427454546285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_4
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 940
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d21d345fbe072c0800000000000000
+      internalID: -4435786194322641602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_5
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 946
+        width: 61
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749cd1159799be520800000000000000
+      internalID: 2732446345261336903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_6
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 936
+        width: 61
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21ede9bd3e3d6150800000000000000
+      internalID: 5867414324366926126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_7
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 925
+        width: 74
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a2bf493c3753030800000000000000
+      internalID: 3473809971441511006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_8
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 940
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72aa8aadcc8b0150800000000000000
+      internalID: 5839916156773376638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_9
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 870
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3edf73192904b00800000000000000
+      internalID: 810809085333988321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 839
+        width: 76
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01dd742f69cfbd770800000000000000
+      internalID: 8636774435653147920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_11
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 839
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e61813da3766cd00800000000000000
+      internalID: 992594270229108448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_12
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 862
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175a9d97ddcd21280800000000000000
+      internalID: -9073947455407938191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_13
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 864
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1b6f6ffe2d1b410800000000000000
+      internalID: 1491204879718724042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_14
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 843
+        width: 63
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3899c2000bc4e96f0800000000000000
+      internalID: -676018575258117757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_15
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 839
+        width: 73
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acde13dcf7cf3e260800000000000000
+      internalID: 7125816661263904202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_16
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 845
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af05b4c0c11270760800000000000000
+      internalID: 7423938915092615418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_17
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 831
+        width: 62
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f5695dc9e47a860800000000000000
+      internalID: 7541082536560451427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_18
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 832
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a6761ab4f5c3030800000000000000
+      internalID: 3475757790858275435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_19
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 839
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a691720fd435cfc00800000000000000
+      internalID: 935714416792901994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_20
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 855
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab984f63a22d5930800000000000000
+      internalID: 4133498118338026411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_21
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 637
+        width: 81
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ef342aecc7bc780800000000000000
+      internalID: -8661692231389544835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 741
+        width: 79
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b615fa2cee1186ed0800000000000000
+      internalID: -2420665082545483413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_23
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 738
+        width: 39
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af15e7088cf708720800000000000000
+      internalID: 2846415463624102394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 637
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e0c063e26643070800000000000000
+      internalID: 8085199579698171396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_25
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 738
+        width: 61
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1eaa75504cf5230800000000000000
+      internalID: 3629835351908606432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_26
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 673
+        width: 79
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55ec2494494f2d90800000000000000
+      internalID: -7120391926956890789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_27
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 637
+        width: 70
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6efe75b274f61f20800000000000000
+      internalID: 3393168142778695278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_28
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 738
+        width: 70
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3babc298068b880800000000000000
+      internalID: -8595013746559372310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_29
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 641
+        width: 60
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b015c7d90dddd4960800000000000000
+      internalID: 7587964835254259979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_30
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 742
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5e3d4ce961906d0800000000000000
+      internalID: -3023860803639712340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_31
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 622
+        width: 74
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c544fbd3482b80760800000000000000
+      internalID: 7424380266761634908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_32
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 726
+        width: 70
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74031046646bac5c0800000000000000
+      internalID: -4194339689500430265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_33
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 640
+        width: 62
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d49136681c470f650800000000000000
+      internalID: 6264635456204511565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_34
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 742
+        width: 52
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757a80368363f4560800000000000000
+      internalID: 7300113136798443351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_35
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 637
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 627dbafe239550540800000000000000
+      internalID: 4973479438804834086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_36
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 738
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a0e8de6b366e1c0800000000000000
+      internalID: -4474779542425302476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 536
+        width: 61
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f258931eaf20b9f60800000000000000
+      internalID: 8042024836143875375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_38
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 589
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603a8564220661ad0800000000000000
+      internalID: -2731890423628258554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_39
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 565
+        width: 73
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5258ef7c241f2e0800000000000000
+      internalID: -2093818925014506022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_40
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 520
+        width: 73
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bd7c51a73424cc0800000000000000
+      internalID: -3728343349878858977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_41
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 540
+        width: 50
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3a7215094ecc3f0800000000000000
+      internalID: -879076518756113421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_42
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 536
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7240daf3bfc84fd70800000000000000
+      internalID: 9076034159791375399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_43
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 536
+        width: 80
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30bba6aa1236894d0800000000000000
+      internalID: -3127640944964617469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_44
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 536
+        width: 67
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925a9ec1593367c40800000000000000
+      internalID: 5509647909662598441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_45
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 539
+        width: 60
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c926c0525eef2f0800000000000000
+      internalID: -937059725162144728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_46
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 545
+        width: 4
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c126b25722ff0d6a0800000000000000
+      internalID: -6426356144797949412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_47
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 478
+        width: 11
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4405ffd411d23a8b0800000000000000
+      internalID: -5142216797180702652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_48
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 498
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55546d531808d7bb0800000000000000
+      internalID: -4936648324085824171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_49
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 492
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41312acd3b02d290800000000000000
+      internalID: -7867213239050751669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_50
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 498
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f341634048851be0800000000000000
+      internalID: -1507148690695830535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_51
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 419
+        width: 73
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed05209d585c9d790800000000000000
+      internalID: -7504750125374091042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_52
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 439
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88fd170a48d74a60800000000000000
+      internalID: 7658327503825401998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_53
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 435
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6199d9421b47f50800000000000000
+      internalID: 6878317301722584823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_54
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 459
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bba6829526150a90800000000000000
+      internalID: -7348442866357195856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_55
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 488
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb97325e7e60d1e0800000000000000
+      internalID: -2175117131195638859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_56
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 435
+        width: 79
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5457131b40493d0800000000000000
+      internalID: -3200928276068088409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_57
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 437
+        width: 60
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcb9bec19523d720800000000000000
+      internalID: 2869678695733902523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_58
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 438
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15d0f5508fdd9e70800000000000000
+      internalID: 9123694162413147422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_59
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 435
+        width: 42
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd397be3b4622440800000000000000
+      internalID: 4909597267699776969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_60
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 440
+        width: 57
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70161c450f8728200800000000000000
+      internalID: 180839908657684743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_61
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 393
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809a94881fbce0c00800000000000000
+      internalID: 868856016363170056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_62
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 368
+        width: 59
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ae2015e739f9f60800000000000000
+      internalID: 8043309630241303086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_63
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 406
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4346c8589de6356b0800000000000000
+      internalID: -5308777655212153804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_64
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 319
+        width: 77
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7402f5964b4203c80800000000000000
+      internalID: -8345129752236974009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_65
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 357
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fafaf97a9146c070800000000000000
+      internalID: 8126254709363899129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_66
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 388
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651f627fcc4ad76d0800000000000000
+      internalID: -2991053377277333162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_67
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 334
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0b83f98b32d3350800000000000000
+      internalID: 5997989554579615944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_68
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 334
+        width: 75
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4386028a1c4d990800000000000000
+      internalID: -7362046563001551700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_69
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 334
+        width: 63
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47680dd3925944fa0800000000000000
+      internalID: -5817360814292564364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_70
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 350
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0093833112a292c50800000000000000
+      internalID: 6640885447079246080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_71
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 353
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fede1a5db2c4fad0800000000000000
+      internalID: -2669294560607281422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_72
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 347
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51be455b5a69ebe30800000000000000
+      internalID: 4521216714382568213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_73
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 360
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c486624f79c2bc0800000000000000
+      internalID: -3806500510162727879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_74
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 339
+        width: 60
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99db423b9c866fb80800000000000000
+      internalID: -8361380442663502439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_75
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 337
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5e208d053f70e40800000000000000
+      internalID: 5622730188342355443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_76
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 334
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5664ba55576667f0800000000000000
+      internalID: -619694282425211299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_77
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 282
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c83de3c11a02a30800000000000000
+      internalID: 4188524796139768949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_78
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 279
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adaf8f34a10c99180800000000000000
+      internalID: -9108037552338044198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_79
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 293
+        width: 37
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9478a645221e5b4f0800000000000000
+      internalID: -813496620109101239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_80
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 241
+        width: 61
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602b8da75d17c7240800000000000000
+      internalID: 4790829265318359558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_81
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 219
+        width: 79
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9d2ae05bd4fc4d0800000000000000
+      internalID: -3112183377459750421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_82
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 235
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee85cab77f81c72b0800000000000000
+      internalID: -5585561986635376402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_83
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 233
+        width: 75
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8829dd9241e060e0800000000000000
+      internalID: -2278573735217125236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_84
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 233
+        width: 62
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a7402d3c587a0c0800000000000000
+      internalID: -4564532621228082665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_85
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 251
+        width: 8
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c362da3286bb34590800000000000000
+      internalID: -7691097682669132228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_86
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 240
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9b12e0a5cda0c00800000000000000
+      internalID: 867748157564500433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_87
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 236
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6971136855d11c380800000000000000
+      internalID: -8952842331075045482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_88
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 239
+        width: 60
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4714b33bab405a0800000000000000
+      internalID: -6555909878588541753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_89
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 236
+        width: 61
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96de5770f21971840800000000000000
+      internalID: 5194780326369815913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_90
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 239
+        width: 61
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c4c94c90018d360800000000000000
+      internalID: 7194518038863694854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_91
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 238
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800219e8c5e65a0f0800000000000000
+      internalID: -1106356789641666552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_92
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 233
+        width: 40
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e87989129793fcb0800000000000000
+      internalID: -4831351321488951067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_93
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 132
+        width: 61
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abf8fedc94ca73a0800000000000000
+      internalID: -6666800120333796445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_94
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 132
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dee651c7ae7236d0800000000000000
+      internalID: -3012205941789102384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_95
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 132
+        width: 76
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1414a20b3f04bad20800000000000000
+      internalID: 3290795368101069121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_96
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 152
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4cce2dc6c3380bb0800000000000000
+      internalID: -4969665259864404914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_97
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 132
+        width: 65
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2561ce3f8c03e230800000000000000
+      internalID: 3666788330982434091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_98
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 135
+        width: 62
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d11e7d9cc2d7e2b0800000000000000
+      internalID: -5555239839080771120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_99
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 119
+        width: 76
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4274fdc9a0497ae10800000000000000
+      internalID: 2208896915550979876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_100
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 132
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed455859ffe6ea70800000000000000
+      internalID: 8856029571478539749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_101
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 31
+        width: 62
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22969b69d0a36e8f0800000000000000
+      internalID: -511657677622253278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_102
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 31
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811b486fe7e3b17d0800000000000000
+      internalID: -2946692816161165032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_103
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 31
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a03e27084ef9d90800000000000000
+      internalID: -7088696048123442600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_104
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 37
+        width: 61
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd242226ee275970800000000000000
+      internalID: 8743508767513259468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_105
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 29
+        width: 62
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f9cefbd58868710800000000000000
+      internalID: 1695192245984862077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_106
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 17
+        width: 75
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab286d265f331680800000000000000
+      internalID: -8785608808708166741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: neutral_astralcrusader_107
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 31
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80544630117ca4d50800000000000000
+      internalID: 6722404269689160968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
