@@ -13,6 +13,8 @@ namespace Duelers.Local.View
         [SerializeField] private Vector3 perspectivePositionAdjustment = Vector3.zero;
         [SerializeField] private Vector3 perspectiveRotationAdjustment = Vector3.zero;
         [SerializeField] private GridTile tilePrefab;
+        private List<TileJson> tileQueue = new List<TileJson>();
+        
 
         public void Awake()
         {
@@ -26,16 +28,36 @@ namespace Duelers.Local.View
 
         public void SetTileObject(string tile, ITileObject o) => _tiles[tile].ObjectOnTile = o;
 
-        public GridTile HandleTile(TileJson tileJson)
+        public void HandleTile(TileJson tileJson, bool mainThread)
         {
-            var t = !_tiles.ContainsKey(tileJson.Id) ? Instantiate(tilePrefab, transform) : _tiles[tileJson.Id];
+            if (!mainThread)
+            {
+                tileQueue.Add(tileJson);
+                return;
+            }
+            GridTile t;
+            if (!_tiles.ContainsKey(tileJson.Id))
+            {
+                t = Instantiate(tilePrefab, transform);
+            } else
+            {
+                t = _tiles[tileJson.Id];
+            }
             t.Awake();
             t.X = tileJson.X;
             t.Y = tileJson.Y;
             t.Id = tileJson.Id;
 
             _tiles[tileJson.Id] = t;
-            return t;
+        }
+
+        public void ProcessQueue()
+        {
+            foreach (var tileJson in tileQueue.ToArray())
+            {
+                HandleTile(tileJson, true);
+                tileQueue.Remove(tileJson);
+            }
         }
 
         // public void SubscribeToOnClick(UnityAction<string, GameObject> clickOnTile)
@@ -59,6 +81,6 @@ namespace Duelers.Local.View
         //     _selectedTile = t;
         // }
 
-        public void RemoveTileObject(UnitCard getUnit) => _tiles[getUnit.TileId].ObjectOnTile = null;
+        public void RemoveTileObject(BoardCharacter getUnit) => _tiles[getUnit.TileId].ObjectOnTile = null;
     }
 }

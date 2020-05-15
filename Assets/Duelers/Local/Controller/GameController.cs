@@ -18,12 +18,19 @@ namespace Duelers.Local.Controller
         [SerializeField] private InterfaceController _interface;
         // private SelectionController _selectionController;
         [SerializeField] private GameServer _server;
+        private IChoice CurrentChoice = null;
+        private bool NewChoice = false;
+        private Dictionary<String, Card> Cards = new Dictionary<string, Card>();
+        private List<Card> DrawQueue = new List<Card>();
+        private List<Card> DiscardQueue = new List<Card>();
+        private List<Character> SummonQueue = new List<Character>();
 
         private UnitController _unitController;
 
+        [FormerlySerializedAs("unitCardPrefab")]
         [FormerlySerializedAs("_cardPrefab")]
         [SerializeField]
-        private UnitCard unitCardPrefab;
+        private BoardCharacter boardCharacterPrefab;
 
         private void Awake()
         {
@@ -36,6 +43,13 @@ namespace Duelers.Local.Controller
         private void Update()
         {
             SentMessages();
+            _grid.ProcessQueue();
+
+            foreach (var character in SummonQueue.ToArray())
+            {
+                CreateBoardCharacter(character);
+                SummonQueue.Remove(character);
+            }
         }
 
         private void SentMessages()
@@ -52,44 +66,30 @@ namespace Duelers.Local.Controller
                 {
                     var typeOfMessage = JsonConvert.DeserializeObject<TypeMessage>(message).Type;
 
-                    string plist;
-                    UnitCard unit;
-
                     switch (typeOfMessage)
                     {
                         case MessageType.TILE:
                             var tileMessage = JsonConvert.DeserializeObject<TileMessage>(message);
-                            var gridTile = _grid.HandleTile(tileMessage.tile);
+                            _grid.HandleTile(tileMessage.tile, false);
                             break;
                         case MessageType.NONE:
                             break;
                         case MessageType.CHARACTER:
                             var characterMessage = JsonConvert.DeserializeObject<CharacterMessage>(message);
-                            plist = await _server.GetJson(characterMessage.character.SpriteUrl);
-                            unit = _unitController.GetUnit(characterMessage.character.Id);
-                            if (unit == null)
-                            {
-                                unit = CreateCard(characterMessage.character, plist);
-                            }
+                            var character = characterMessage.character as Character;
 
-                            _unitController.HandleCharacter(unit, characterMessage.character);
-                            var tile = _grid.GetTile(unit.TileId);
-                            tile.ObjectOnTile = unit;
-                            _interface.Targets.Add(unit.Id, JsonConvert.DeserializeObject<TargetList>(_server.GetTargets(new ResolveTargetRequest()
-                            {
-                                Target = unit.Targets.FirstOrDefault(),
-                                Targets= Array.Empty<string>(),
-                                LastTarget = null
-                            }).Result));
-                            // _grid.RemoveTileObject(_unitController.GetUnit(characterMessage.character.Id));
-                            // _grid.SetTileObject(
-                            //     characterMessage.character.TileId,
-                            //     _unitController.GetUnit(characterMessage.character.Id).gameObject
-                            // );                        
+                            _unitController.HandleCharacter(character);                   
+                            break;
+                        case MessageType.SUMMON:
+                            var summonMessage = JsonConvert.DeserializeObject<SummonMessage>(message);
+                            var storedCharacter = _unitController.GetUnit(summonMessage.ObjectId);
+                            if (storedCharacter != null) { SummonQueue.Add(storedCharacter); }
                             break;
                         case MessageType.CHOICE:
                             var choiceMessage = JsonConvert.DeserializeObject<ChoiceMessage>(message);
-                            var units = new List<UnitCard>();
+                            CurrentChoice = new Choice(choiceMessage);
+                            NewChoice = true;
+                            /*var units = new List<BoardCharacter>();
                             foreach (var opt in choiceMessage.Options)
                             {
                                 plist = await _server.GetJson(opt.SpriteUrl);
@@ -103,7 +103,7 @@ namespace Duelers.Local.Controller
                             }
 
                             _interface.StartChoice(choiceMessage, units);
-                            _grid.gameObject.SetActive(false);
+                            _grid.gameObject.SetActive(false);*/
                             break;
                         case MessageType.RESOLVE_CHOICE:
                             var resolveChoice = JsonConvert.DeserializeObject<ResolveChoiceMessage>(message);
@@ -111,29 +111,35 @@ namespace Duelers.Local.Controller
                             _grid.gameObject.SetActive(true);
                             break;
                         case MessageType.CARD:
-                            var drawMessage = JsonConvert.DeserializeObject<DrawMessage>(message);
+                            var drawMessage = JsonConvert.DeserializeObject<CardMessage>(message);
+                            var newCard = Cards.TryGetValue(drawMessage.Card.Id, out var card);
+                            card = newCard ? card : drawMessage.Card as Card;
 
-                            if (drawMessage.Card.InHand)
+                            if (drawMessage.Card.InHand && (newCard || !card.InHand))
                             {
-                                plist = await _server.GetJson(drawMessage.Card.SpriteUrl);
+                                /*plist = await _server.GetJson(drawMessage.Card.SpriteUrl);
                                 unit = CreateCard(drawMessage.Card, plist);
 
-                                _interface.AddCardToHand(unit);
+                                _interface.AddCardToHand(unit);*/
+                                DrawQueue.Add(card);
                             }
-                            else
+                            else if (!drawMessage.Card.InHand && card.InHand)
                             {
-                                unit = _unitController.GetUnit(drawMessage.Card.Id);
-                                _interface.RemoveCardFromHand(unit);
+                                /*unit = _unitController.GetUnit(drawMessage.Card.Id);
+                                _interface.RemoveCardFromHand(unit);*/
+                                DiscardQueue.Add(card);
                             }
 
-                            _interface.Targets.Add(unit.Id, JsonConvert.DeserializeObject<TargetList>(_server.GetTargets(
+                            Cards[card.Id] = card;
+
+                            /*_interface.Targets.Add(card.Id, JsonConvert.DeserializeObject<TargetList>(_server.GetTargets(
                                 new ResolveTargetRequest()
                                 {
-                                    Target = unit.Targets.FirstOrDefault(),
+                                    Target = card.Targets.FirstOrDefault(),
                                     Targets = Array.Empty<string>(),
                                     LastTarget = null
                                 }
-                            ).Result));
+                            ).Result));*/
                             break;
                         default:
                             throw new ArgumentOutOfRangeException();
@@ -146,18 +152,22 @@ namespace Duelers.Local.Controller
                 }
         }
 
-        private UnitCard CreateCard(CardJson drawMessageCard, string plist)
+        async private Task<BoardCharacter> CreateBoardCharacter(Character character)
         {
-            var newCard = Instantiate(unitCardPrefab);
-            var localScale = newCard.transform.localScale;
+            string plist = await _server.GetJson(character.SpriteUrl);
+            var boardCharacter = Instantiate(boardCharacterPrefab);
+            var localScale = boardCharacter.transform.localScale;
             localScale = new Vector3(
-                drawMessageCard.Facing == 0 ? 1 : drawMessageCard.Facing * localScale.x,
+                character.Facing == 0 ? 1 : character.Facing * localScale.x,
                 localScale.y,
                 localScale.z);
-            newCard.transform.localScale = localScale;
-            newCard.ParseCardJson(drawMessageCard, plist, _interface.CardPopup);
-            newCard.name = drawMessageCard.Id;
-            return newCard;
+            boardCharacter.transform.localScale = localScale;
+            boardCharacter.ParseCardJson(character, plist, _interface.CardPopup);
+            boardCharacter.name = character.Id;
+            character.BoardCharacter = boardCharacter;
+            var tile = _grid.GetTile(boardCharacter.TileId);
+            tile.ObjectOnTile = boardCharacter;
+            return boardCharacter;
         }
     }
 
@@ -165,8 +175,8 @@ namespace Duelers.Local.Controller
     {
     }
 
-    public class DrawMessage : TypeMessage
+    public class CardMessage : TypeMessage
     {
-        [JsonProperty("card")] public CardJson Card { get; set; }
+        [JsonProperty("card")] public ICard Card { get; set; }
     }
 }

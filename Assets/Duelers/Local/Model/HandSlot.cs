@@ -13,8 +13,8 @@ namespace Duelers.Local.Model
         public static event Action<HandSlot> OnMouseExitEvent = delegate { };
         public static event Action<HandSlot> OnMouseClickEvent = delegate { };
 
-        private UnitCard _card;
-        public UnitCard UnitCardInHand
+        private BoardCharacter _card;
+        public BoardCharacter BoardCharacterInHand
         {
             get => _card;
             set

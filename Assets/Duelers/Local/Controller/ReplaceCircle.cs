@@ -12,7 +12,7 @@ namespace Duelers.Local.Controller
         [SerializeField] private Image sr;
         public string Id { get; set; }
 
-        public void CreateChoice(UnitCard unit)
+        public void CreateChoice(BoardCharacter unit)
         {
             var o = unit.gameObject;
             o.transform.SetParent(transform, false);

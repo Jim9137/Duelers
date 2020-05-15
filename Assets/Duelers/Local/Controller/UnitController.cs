@@ -1,18 +1,17 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 using Duelers.Local.Model;
 using Duelers.Local.View;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace Duelers.Local.Controller
 {
     public class UnitController
     {
-        private readonly Dictionary<string, UnitCard> _units = new Dictionary<string, UnitCard>();
+        private readonly Dictionary<string, Character> _characters = new Dictionary<string, Character>();
+        private readonly Dictionary<string, BoardCharacter> _boardCharacter = new Dictionary<string, BoardCharacter>();
         private readonly BattleGrid _grid;
-        private (GridTile, UnitCard) _selected;
+        private (GridTile, BoardCharacter) _selected;
 
         public UnitController(BattleGrid _grid)
         {
@@ -34,14 +33,13 @@ namespace Duelers.Local.Controller
             return false;
         }
 
-        public void HandleCharacter(UnitCard unit, CardJson plist)
+        public void HandleCharacter(Character character)
         {
-            if (!_units.ContainsKey(unit.Id)) _units.Add(unit.Id, unit);
-
-            _units[unit.Id] = unit;
+            character.BoardCharacter = _boardCharacter.TryGetValue(character.Id, out var boardCharacter) ? boardCharacter : null;
+            _characters[character.Id] = character;
         }
 
-        public UnitCard GetUnit(string id) => _units.TryGetValue(id, out var unit) ? unit : null;
+        public Character GetUnit(string id) => _characters.TryGetValue(id, out var unit) ? unit : null;
 
         public void GetActions() { }
 
@@ -56,7 +54,7 @@ namespace Duelers.Local.Controller
                 return;
             }
 
-            var go = objectOnTile as UnitCard;
+            var go = objectOnTile as BoardCharacter;
 
             if (go == null)
             {
@@ -67,7 +65,7 @@ namespace Duelers.Local.Controller
             ShowMovementTiles(go);
         }
 
-        private void ShowMovementTiles(UnitCard go)
+        private void ShowMovementTiles(BoardCharacter go)
         {
             foreach (var tile in go.MoveTargets)
             {
@@ -90,7 +88,7 @@ namespace Duelers.Local.Controller
                 return;
             }
 
-            var go = objectOnTile as UnitCard;
+            var go = objectOnTile as BoardCharacter;
             go.HidePopup();
 
             if (go == null || go?.name == _selected.Item2?.name)
@@ -100,7 +98,7 @@ namespace Duelers.Local.Controller
 
             HideMovementTiles(go);
         }
-        private void HideMovementTiles(UnitCard go)
+        private void HideMovementTiles(BoardCharacter go)
         {
             foreach (var tile in go.MoveTargets)
             {
@@ -113,12 +111,12 @@ namespace Duelers.Local.Controller
         {
             var objectOnTile = tileClicked?.ObjectOnTile;
 
-            var go = objectOnTile as UnitCard;
+            var go = objectOnTile as BoardCharacter;
 
             // TODO: Check who owns the thing, then do stuff accordingly.
             Deselect();
 
-            if (_units.TryGetValue(go?.name ?? "", out var value))
+            if (_boardCharacter.TryGetValue(go?.name ?? "", out var value))
             {
                 _selected = (tileClicked, value);
                 tileClicked.ShowHighlightTile();

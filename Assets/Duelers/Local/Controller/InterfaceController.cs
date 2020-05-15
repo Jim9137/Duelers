@@ -13,14 +13,14 @@ namespace Duelers.Local.Controller
     {
         [SerializeField] private CardPopup _cardPopup;
         [SerializeField] private Canvas handCanvas;
-        [SerializeField] private Dictionary<HandSlot, UnitCard> handSlots = new Dictionary<HandSlot, UnitCard>();
+        [SerializeField] private Dictionary<HandSlot, BoardCharacter> handSlots = new Dictionary<HandSlot, BoardCharacter>();
         [SerializeField] private ReplaceButton replaceButton;
         [SerializeField] private Canvas replaceCanvas;
         [SerializeField] private ReplaceCircle[] replaceSlots;
         private List<string> messages;
         private string _choiceId;
         public BattleGrid Grid { get; set; }
-        private (HandSlot slot, UnitCard unit) _selected;
+        private (HandSlot slot, BoardCharacter unit) _selected;
         public Dictionary<string, TargetList> Targets = new Dictionary<string, TargetList>();
 
         private void Destroy()
@@ -43,12 +43,12 @@ namespace Duelers.Local.Controller
             GridTile.OnMouseExitEvent += HideHighlightCursor;
             GridTile.OnMouseClickEvent += HandleClick;
 
-            var dictionary = new Dictionary<HandSlot, UnitCard>();
+            var dictionary = new Dictionary<HandSlot, BoardCharacter>();
             var slots = handCanvas.GetComponentsInChildren<HandSlot>().OrderBy(x => x.name).ToArray();
             for (var i = 0; i < slots.Length; i++)
             {
                 var x = slots[i];
-                var pair = new KeyValuePair<HandSlot, UnitCard>(x, null);
+                var pair = new KeyValuePair<HandSlot, BoardCharacter>(x, null);
                 dictionary.Add(pair.Key, pair.Value);
             }
 
@@ -117,7 +117,7 @@ namespace Duelers.Local.Controller
             }));
         }
 
-        public void StartChoice(ChoiceMessage choiceMessage, List<UnitCard> unitCards)
+        public void StartChoice(ChoiceMessage choiceMessage, List<BoardCharacter> unitCards)
         {
             StartReplace();
             // TODO: these should be generated from choiceMessage.selectableOptions
@@ -140,23 +140,23 @@ namespace Duelers.Local.Controller
             return r;
         }
 
-        public void AddCardToHand(UnitCard unitCard)
+        public void AddCardToHand(BoardCharacter boardCharacter)
         {
-            if(handSlots.Any(x => x.Value?.Id == unitCard.Id))
+            if(handSlots.Any(x => x.Value?.Id == boardCharacter.Id))
             {
                 return;
             }
             var firstFreeSlot = handSlots.First(x => x.Value == null);
-            unitCard.gameObject.transform.parent = firstFreeSlot.Key.gameObject.transform;
-            unitCard.gameObject.transform.localPosition = new Vector3(0, 0, 0);
-            unitCard.gameObject.transform.localScale =
-                new Vector3(Mathf.Sign(unitCard.gameObject.transform.localScale.x) * 80f, 80f, 80f);
-            handSlots[firstFreeSlot.Key] = unitCard;
-            firstFreeSlot.Key.SetMana(unitCard.Mana);
-            firstFreeSlot.Key.UnitCardInHand = unitCard;
+            boardCharacter.gameObject.transform.parent = firstFreeSlot.Key.gameObject.transform;
+            boardCharacter.gameObject.transform.localPosition = new Vector3(0, 0, 0);
+            boardCharacter.gameObject.transform.localScale =
+                new Vector3(Mathf.Sign(boardCharacter.gameObject.transform.localScale.x) * 80f, 80f, 80f);
+            handSlots[firstFreeSlot.Key] = boardCharacter;
+            firstFreeSlot.Key.SetMana(boardCharacter.Mana);
+            firstFreeSlot.Key.BoardCharacterInHand = boardCharacter;
         }
 
-        public void RemoveCardFromHand(UnitCard unit)
+        public void RemoveCardFromHand(BoardCharacter unit)
         {
             var slot = handSlots.First(x => x.Value.Id == unit.Id);
             Destroy(slot.Value.gameObject);
@@ -178,7 +178,7 @@ namespace Duelers.Local.Controller
 
         public void SelectHandCard(HandSlot slot)
         {
-            var go = slot.UnitCardInHand;
+            var go = slot.BoardCharacterInHand;
             if (go == null)
             {
                 return;

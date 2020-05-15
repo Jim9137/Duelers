@@ -8,6 +8,7 @@ namespace Duelers.Common
         CHOICE,
         RESOLVE_CHOICE,
         CARD,
-        PLAY
+        PLAY,
+        SUMMON
     }
 }
