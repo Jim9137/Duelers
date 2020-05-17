@@ -5,23 +5,19 @@ using UnityEngine;
 
 namespace Duelers.Local.Controller
 {
-    public class BoardCharacter : MonoBehaviour, ITileObject, IBoardObject
+    public class BoardCard : MonoBehaviour, ITileObject, IBoardObject
     {
         [SerializeField] private AnimationController _animationController;
-        [SerializeField] private ICharacter _cardProperties;
+        [SerializeField] private ICardPopupData _cardProperties;
         private CardPopup _popup;
 
-        public string Mana => _cardProperties.Cost.ToString();
-        public string Id => _cardProperties.Id;
-        public string[] MoveTargets => _cardProperties.MoveTargets;
-        public string[] AttackTargets => _cardProperties.AttackTargets;
-        public string TileId => _cardProperties.TileId;
-
         public GameObject GameObject => gameObject;
+        public string Id => _cardProperties.Id;
+        public string Mana => _cardProperties.Cost.ToString();
 
-        public void ParseCardJson(ICharacter character, string plist, CardPopup popup)
+        public void ParseCardJson(ICardPopupData data, string plist, CardPopup popup)
         {
-            _cardProperties = character;
+            _cardProperties = data;
             AddAnimationsToAnimationController(plist);
             _popup = popup;
         }

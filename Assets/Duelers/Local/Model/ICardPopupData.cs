@@ -2,7 +2,7 @@
 
 namespace Duelers.Local.Model
 {
-    public interface ICardPopupData
+    public interface ICardPopupData : IGenericGameObject
     {
         [JsonProperty("health")] long? Health { get; set; }
         [JsonProperty("attack")] long? Attack { get; set; }

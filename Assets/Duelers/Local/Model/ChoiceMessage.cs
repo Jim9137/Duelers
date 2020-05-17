@@ -12,5 +12,15 @@ namespace Duelers.Local.Model
         [JsonProperty("selectableOptions")] public int SelectableOptions { get; set; }
 
         [JsonProperty("id")] public string Id { get; set; }
+        
+        public ChoiceMessage(IEnumerable<ChoiceOption> options)
+        {
+            Options = new List<IChoiceOption>();
+            foreach (var option in options)
+            {
+                Options.Add(option);
+            }
+        }
+        
     }
 }

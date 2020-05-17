@@ -49,16 +49,16 @@ namespace Duelers.Server
         
         
 
-        public async void Connect(Func<string, Task> callback)
+        public async void Connect(Func<string, bool> callback)
         {
             try
             {
                 _clientWebSocket.SslConfiguration.EnabledSslProtocols = System.Security.Authentication.SslProtocols.Tls12;
-                _clientWebSocket.OnMessage += async (sender, e) =>
+                _clientWebSocket.OnMessage += (sender, e) =>
                 {
                     if (e.IsText)
                     {
-                        await callback(e.Data);
+                        callback(e.Data);
                     }
                 };
                 _clientWebSocket.OnOpen += (sender, e) =>

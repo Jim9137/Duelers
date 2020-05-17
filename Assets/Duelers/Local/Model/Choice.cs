@@ -12,6 +12,7 @@ namespace Duelers.Local.Model
         {
             SelectableOptions = data.SelectableOptions;
             Id = data.Id;
+            Options = new List<IChoiceOption>();
             foreach (var option in data.Options)
             {
                 Options.Add(option as ChoiceOption);

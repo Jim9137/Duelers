@@ -12,16 +12,16 @@ namespace Duelers.Local.Controller
         [SerializeField] private Image sr;
         public string Id { get; set; }
 
-        public void CreateChoice(BoardCharacter unit)
+        public void CreateChoice(BoardCard card)
         {
-            var o = unit.gameObject;
+            var o = card.gameObject;
             o.transform.SetParent(transform, false);
             o.transform.localPosition = new Vector3(0, 0, -5);
             o.transform.localScale = new Vector3(200, 200, 200);
-            manaText.text = unit.Mana;
-            unit.StartAnimation("idle", false);
+            manaText.text = card.Mana;
+            card.StartAnimation("idle", false);
             // All of the above stuff should be temporary
-            Id = unit.Id;
+            Id = card.Id;
             _button = GetComponent<Button>();
             _button.onClick.AddListener(Select);
         }
