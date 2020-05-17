@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Duelers.Local.Model;
 using Duelers.Local.View;
 using UnityEngine;
@@ -8,90 +8,132 @@ namespace Duelers.Local.Controller
 {
     public class UnitController
     {
-        private readonly Dictionary<string, UnitCard> _units = new Dictionary<string, UnitCard>();
-        private (GridTile, UnitCard) selected;
+        private readonly Dictionary<string, Character> _characters = new Dictionary<string, Character>();
+        private readonly Dictionary<string, BoardCharacter> _boardCharacter = new Dictionary<string, BoardCharacter>();
+        private readonly BattleGrid _grid;
+        private (GridTile, BoardCharacter) _selected;
 
+        public UnitController(BattleGrid _grid)
+        {
+            GridTile.OnMouseExitEvent += OnExit;
+            GridTile.OnMouseOverEvent += OnOver;
+            GridTile.OnMouseClickEvent += OnClick;
+            this._grid = _grid;
+        }
+
+        ~UnitController()
+        {
+            GridTile.OnMouseExitEvent -= OnExit;
+            GridTile.OnMouseOverEvent -= OnOver;
+            GridTile.OnMouseClickEvent -= OnClick;
+        }
         public bool TryDoAction(GameObject active, GameObject go)
         {
             Debug.Log($"Some magic between {active} and {go}");
             return false;
         }
 
-        public void HandleCharacter(UnitCard unit, CardJson plist)
+        public void HandleCharacter(Character character)
         {
-            if (!_units.ContainsKey(unit.Id)) _units.Add(unit.Id, unit);
-
-            _units[unit.Id] = unit;
+            character.BoardCharacter = _boardCharacter.TryGetValue(character.Id, out var boardCharacter) ? boardCharacter : null;
+            _characters[character.Id] = character;
         }
 
-        public UnitCard GetUnit(string id) => _units.TryGetValue(id, out var unit) ? unit : null;
+        public Character GetUnit(string id) => _characters.TryGetValue(id, out var unit) ? unit : null;
 
         public void GetActions() { }
 
         // TODO: Add OnEnter -> show available targets and movement tiles.        
         // TODO: Add OnExit -> don't show available targets and movement tiles.        
 
-        internal void OnEnter(GridTile tileClicked, ITileObject objectOnTile)
+        internal void OnOver(GridTile tileClicked)
         {
+            var objectOnTile = tileClicked?.ObjectOnTile;
             if (objectOnTile == null)
             {
                 return;
             }
 
-            var go = objectOnTile as UnitCard;
+            var go = objectOnTile as BoardCharacter;
+
             if (go == null)
             {
                 return;
             }
+
             go.ShowPopup();
-
-
+            ShowMovementTiles(go);
         }
-        
-        internal void OnExit(GridTile tileClicked, ITileObject objectOnTile)
+
+        private void ShowMovementTiles(BoardCharacter go)
         {
+            foreach (var tile in go.MoveTargets)
+            {
+                var t = _grid.GetTile(tile);
+                t.ShowMovementTile();
+            }
+        }
+
+        internal void OnExit(GridTile tileClicked)
+        {
+            var objectOnTile = tileClicked?.ObjectOnTile;
+
+            //if (_selected.Item2?.MoveTargets.Any(x => x == tileClicked.Id) == true)
+            //{
+            //    tileClicked.ShowMovementTile();
+            //}
+
             if (objectOnTile == null)
             {
                 return;
             }
 
-            var go = objectOnTile as UnitCard;
-            if (go == null)
+            var go = objectOnTile as BoardCharacter;
+            go.HidePopup();
+
+            if (go == null || go?.name == _selected.Item2?.name)
             {
                 return;
             }
-            go.HidePopup();
+
+            HideMovementTiles(go);
+        }
+        private void HideMovementTiles(BoardCharacter go)
+        {
+            foreach (var tile in go.MoveTargets)
+            {
+                var t = _grid.GetTile(tile);
+                t.HideMovementTile();
+            }
         }
 
-        internal void OnClick(GridTile tileClicked, ITileObject objectOnTile)
+        internal void OnClick(GridTile tileClicked)
         {
-            var go = objectOnTile as UnitCard;
-            // if(objectOnTile == null)
-            // {
-            //     Deselect();            
-            // }
+            var objectOnTile = tileClicked?.ObjectOnTile;
+
+            var go = objectOnTile as BoardCharacter;
+
             // TODO: Check who owns the thing, then do stuff accordingly.
-            if (_units.TryGetValue(go?.name ?? "", out var value))
+            Deselect();
+
+            if (_boardCharacter.TryGetValue(go?.name ?? "", out var value))
             {
-                selected = (tileClicked, value);
-                tileClicked.Select();
-                // return;
-            }
-            else
-            {
-                Deselect();
+                _selected = (tileClicked, value);
+                tileClicked.ShowHighlightTile();
+                ShowMovementTiles(go);
             }
         }
 
         private void Deselect()
         {
-            if (selected.Item1 == null)
+            if (_selected.Item1 == null)
             {
                 return;
             }
-            selected.Item1.Unselect();
-            selected = (null, null);
+            _selected.Item1.HideHighlightTile();
+            HideMovementTiles(_selected.Item2);
 
+            _selected = (null, null);
         }
     }
 }

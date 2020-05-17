@@ -19,7 +19,6 @@ public class Plist
         _animations = new Dictionary<string, string[]>();
         foreach (var a in json.animations) _animations.Add(a.id, a.frames);
 
-
         _frames = json.frames.ToDictionary(x => x.id, y => new Frame
         {
             Offset = ConvertToVector2(y.offset),

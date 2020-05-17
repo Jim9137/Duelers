@@ -5,14 +5,13 @@ using UnityEngine;
 
 namespace Duelers.Local.Controller
 {
-    public class UnitCard : MonoBehaviour, ITileObject
+    public class BoardCharacter : MonoBehaviour, ITileObject, IBoardObject
     {
         [SerializeField] private AnimationController _animationController;
-        [SerializeField] private CardJson _cardProperties;
+        [SerializeField] private ICharacter _cardProperties;
         private CardPopup _popup;
 
         public string Mana => _cardProperties.Cost.ToString();
-        public string[][] Targets => _cardProperties.Targets;
         public string Id => _cardProperties.Id;
         public string[] MoveTargets => _cardProperties.MoveTargets;
         public string[] AttackTargets => _cardProperties.AttackTargets;
@@ -20,10 +19,9 @@ namespace Duelers.Local.Controller
 
         public GameObject GameObject => gameObject;
 
-
-        public void ParseCardJson(CardJson drawMessageCard, string plist, CardPopup popup)
+        public void ParseCardJson(ICharacter character, string plist, CardPopup popup)
         {
-            _cardProperties = drawMessageCard;
+            _cardProperties = character;
             AddAnimationsToAnimationController(plist);
             _popup = popup;
         }
@@ -31,7 +29,7 @@ namespace Duelers.Local.Controller
         private void AddAnimationsToAnimationController(string plist)
         {
             _animationController.AddPlistFromJson(_cardProperties.SpriteUrl, plist);
-            _animationController.StartAnimation("breathing");
+            _animationController.StartAnimation("idle");
         }
 
         public void StartAnimation(string animation, bool oneShot = false)

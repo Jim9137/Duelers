@@ -28,7 +28,6 @@ public class AnimationController : MonoBehaviour
         StopAllCoroutines();
     }
 
-
     public void AddPlistFromJson(string plistPath, string json)
     {
         if (string.IsNullOrEmpty(plistPath)) return;
@@ -39,7 +38,6 @@ public class AnimationController : MonoBehaviour
     }
 
     public Sprite GetStaticSprite() => _animations.First().Value.First(); // TODO: Just get whatever the heck is first
-
 
     private void AnimationSetup(string animation)
     {
@@ -55,7 +53,6 @@ public class AnimationController : MonoBehaviour
 
     private void CreateAnimationIfNotExists(string animation)
     {
-
         if (!_animations.TryGetValue(animation, out var sprites))
             _animations.Add(animation, _plist.GetAnimation(animation)
                 .Select(x => Sprite.Create(text, x.FrameCoords, new Vector2(0.5f, 0f)))
@@ -67,14 +64,12 @@ public class AnimationController : MonoBehaviour
         AnimationSetup(animation);
         _animationCall = PlayAnimationAndReturn(_animations[animation], _animations[returnAnimation]);
         StartCoroutine(_animationCall);
-
     }
     public void StartAnimation(string animation)
     {
         AnimationSetup(animation);
         _animationCall = PlayAnimationLoop(_animations[animation]);
         StartCoroutine(_animationCall);
-
     }
 
     public void StartAnimationAndReturn(string animation, string returnAnimation)

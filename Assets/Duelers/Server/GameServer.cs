@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.WebSockets;
 using System.Text;
@@ -9,20 +10,19 @@ using Duelers.Common;
 using Duelers.Server.Model;
 using Newtonsoft.Json;
 using UnityEngine;
+using WebSocketSharp;
 
 namespace Duelers.Server
 {
     public class GameServer : MonoBehaviour
     {
         private readonly CancellationToken _cancellationToken = new CancellationToken();
-        private readonly ClientWebSocket _clientWebSocket = new ClientWebSocket();
         private readonly HttpClient _httpClient = new HttpClient();
 
-        private readonly Queue<string> _messagesReceived = new Queue<string>();
-        private readonly Queue<string> _messagesToBeSent = new Queue<string>();
-        private readonly Uri baseUri = new Uri("https://mechaz.org/ ");
-        private readonly Uri gameAddress = new Uri("wss://mechaz.org/api/mechazorg/v1/game/");
-        private ArraySegment<byte> _buffer = new ArraySegment<byte>(new byte[2048]);
+        private static Uri baseUri = new Uri("https://mechaz.org/");
+        private static Uri gameAddress = new Uri("wss://mechaz.org/api/mechazorg/v1/game/");
+        private static Uri resolveAddress = new Uri("https://mechaz.org/api/mechazorg/v1/resolve-target/");
+        private readonly WebSocketSharp.WebSocket _clientWebSocket = new WebSocketSharp.WebSocket(gameAddress.ToString());
         [SerializeField] private string _deckId;
 
         [SerializeField] private string _password;
@@ -30,35 +30,39 @@ namespace Duelers.Server
         // These are temporary. Deckid you can see on the main website when you go and click your deck
         [SerializeField] private string _userName;
         private string _userToken;
-
-        public void AddMessageToQueue(string message) => _messagesToBeSent.Enqueue(message);
-        public string PopMessageFromQueue() => _messagesReceived.Count > 0 ? _messagesReceived.Dequeue() : "";
-
-        private void Awake()
-        {
-            Connect();
-        }
+        public string Token { get => _userToken; }
 
         private void OnDestroy()
         {
             Debug.Log("Closing connection");
 
-            Task.Run(CloseConnection, _cancellationToken)
-                .Wait(_cancellationToken);
+            CloseConnection();
 
-            Debug.Log($"Client should be closed {_clientWebSocket.State}");
+            Debug.Log($"Client should be closed");
         }
 
-        private async Task CloseConnection() =>
-            await _clientWebSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Client destroyed",
-                _cancellationToken);
+        private void CloseConnection() =>
+            _clientWebSocket.CloseAsync();
+        
+        
 
-        private async void Connect()
+        public async void Connect(Func<string, bool> callback)
         {
             try
             {
-                await _clientWebSocket.ConnectAsync(gameAddress, _cancellationToken);
-                if (_clientWebSocket.State == WebSocketState.Open) Debug.Log("connected");
+                _clientWebSocket.SslConfiguration.EnabledSslProtocols = System.Security.Authentication.SslProtocols.Tls12;
+                _clientWebSocket.OnMessage += (sender, e) =>
+                {
+                    if (e.IsText)
+                    {
+                        callback(e.Data);
+                    }
+                };
+                _clientWebSocket.OnOpen += (sender, e) =>
+                {
+                    Debug.Log("connected");
+                };
+                _clientWebSocket.Connect();
                 var content = await Signin();
                 if (content.Contains("error"))
                 {
@@ -66,15 +70,14 @@ namespace Duelers.Server
                 }
 
                 StartGame(content);
-                ReceiveMessages();
+                
             }
             catch (Exception e)
             {
                 Debug.Log("woe " + e.Message);
-                await _clientWebSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Error", CancellationToken.None);
+                _clientWebSocket.CloseAsync();
             }
         }
-
 
         private async Task<string> Signin()
         {
@@ -86,51 +89,31 @@ namespace Duelers.Server
             return await h.Content.ReadAsStringAsync();
         }
 
-
-        private async void StartGame(string content)
+        private void StartGame(string content)
         {
             var response = JsonConvert.DeserializeObject<SigninResponse>(content);
             _userToken = response.token;
             var startGame = new StartGameMessage("START_GAME", response.token, _deckId);
-            var b = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(startGame)));
-            await _clientWebSocket.SendAsync(b, WebSocketMessageType.Text, true, _cancellationToken);
+            _clientWebSocket.SendAsync(JsonConvert.SerializeObject(startGame), b1 => { });
         }
 
-        private async void ReceiveMessages()
+        public void SendMessage(TypeMessage message)
         {
-            var str = new StringBuilder();
-            while (true)
-            {
-                var buffer = new ArraySegment<byte>(new byte[2048]);
-                if (_clientWebSocket.State != WebSocketState.Open) break;
-
-                var r = await _clientWebSocket.ReceiveAsync(buffer, _cancellationToken);
-
-                if (buffer.Array != null) str.Append(Encoding.UTF8.GetString(buffer.Array));
-
-                if (!r.EndOfMessage)
-                {
-                    Debug.Log($"Continuing message, thus far: {str}");
-                    continue;
-                }
-
-                _messagesReceived.Enqueue(str.ToString());
-                Debug.Log("Got: " + str);
-                str.Clear();
-            }
+            message.Token = _userToken;
+            var msgText = JsonConvert.SerializeObject(message);
+            Debug.Log(msgText);
+            _clientWebSocket.SendAsync(msgText, completed => { });
         }
 
-        public async Task SendActions(string[] actions)
+        public async Task<string> GetTargets(ResolveTargetRequest resolveTargets)
         {
-            if (_clientWebSocket.State != WebSocketState.Open) return;
+            if (resolveTargets == null)
+                throw new ArgumentNullException(nameof(resolveTargets));
 
-            foreach (var a in actions)
-            {
-                var messages = JsonConvert.DeserializeObject<UserChoicesMessage>(a);
-                messages.Token = _userToken;
-                var b = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(messages)));
-                await _clientWebSocket.SendAsync(b, WebSocketMessageType.Text, true, _cancellationToken);
-            }
+            resolveTargets.Token = _userToken;
+            var content = new StringContent(JsonConvert.SerializeObject(resolveTargets), Encoding.UTF8, "application/json");
+            var res = await _httpClient.PostAsync(resolveAddress, content, _cancellationToken).ConfigureAwait(false);
+            return await res.Content.ReadAsStringAsync();
         }
 
         public async Task<string> GetJson(string path)
