@@ -12,6 +12,8 @@ namespace Duelers.Local.Model
         public static event Action<HandSlot> OnMouseOverEvent = delegate { };
         public static event Action<HandSlot> OnMouseExitEvent = delegate { };
         public static event Action<HandSlot> OnMouseClickEvent = delegate { };
+        
+        public Card CardInHand { get; set; }
 
         private BoardCard _card;
         public BoardCard BoardCardInHand
@@ -26,8 +28,21 @@ namespace Duelers.Local.Model
         }
 
         // TODO: add some fancy glowing things in the future
-        private void OnMouseEnter() => OnMouseOverEvent(this);
-        private void OnMouseExit() => OnMouseExitEvent(this);
+        private void OnMouseEnter()
+        {
+            if (_card)
+            {
+                _card.ShowPopup();
+            }
+        }
+
+        private void OnMouseExit()
+        {
+            if (_card)
+            {
+                _card.HidePopup();
+            }
+        }
         private void OnMouseUpAsButton() => OnMouseClickEvent(this);
 
         public void SetMana(string v) => manaCost.text = v;

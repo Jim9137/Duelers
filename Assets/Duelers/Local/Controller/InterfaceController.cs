@@ -4,6 +4,7 @@ using System.Linq;
 using Duelers.Common;
 using Duelers.Local.Model;
 using Duelers.Local.View;
+using Duelers.Server;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -17,11 +18,13 @@ namespace Duelers.Local.Controller
         [SerializeField] private ReplaceButton replaceButton;
         [SerializeField] private Canvas replaceCanvas;
         [SerializeField] private ReplaceCircle[] replaceSlots;
+        [SerializeField] private GameServer _server;
         private List<string> messages;
         private string _choiceId;
         public BattleGrid Grid { get; set; }
-        private (HandSlot slot, IBoardObject unit) _selected;
+        private (HandSlot slot, BoardCard unit) _selected;
         public Dictionary<string, TargetList> Targets = new Dictionary<string, TargetList>();
+        private Dictionary<GridTile, string> _AvailableTargets = new Dictionary<GridTile, string>();
 
         private void Destroy()
         {
@@ -58,20 +61,28 @@ namespace Duelers.Local.Controller
             replaceButton._buttonClickedEvent.AddListener(UserConfirmReplace);
         }
 
-        private void HandleClick(GridTile tile)
+        private void Update()
+        {
+            foreach (var t in _AvailableTargets.Keys)
+            {
+                t.ShowSummonTile();
+            }
+        }
+
+        private async void HandleClick(GridTile tile)
         {
             if (_selected.unit == null)
             {
                 return;
             }
-            if (Targets[_selected.unit.Id].Ids.Contains(tile.Id))
+            if (_AvailableTargets.ContainsKey(tile))
             {
                 var play = new PlayMessage()
                 {
                     Targets = new string[] { tile.Id },
                     Source = _selected.unit.Id
                 };
-                messages.Add(JsonConvert.SerializeObject(play));
+                _server.SendMessage(play);
             }
 
 
@@ -84,11 +95,11 @@ namespace Duelers.Local.Controller
                 Debug.LogWarning("Trying to unselect null object", this);
                 return;
             }
-            foreach (var id in Targets[_selected.unit.Id].Ids)
+            foreach (var t in _AvailableTargets.Keys)
             {
-                var t = Grid.GetTile(id);
                 t.HideSummonTile();
             }
+            _AvailableTargets.Clear();
 
             _selected = (null, null);
         }
@@ -109,11 +120,11 @@ namespace Duelers.Local.Controller
                     choices.Add(r.Id);
 
             // need to make an abstract message class
-            messages.Add(JsonConvert.SerializeObject(new UserChoicesMessage
+            _server.SendMessage(new UserChoicesMessage
             {
                 Ids = choices.ToArray(),
                 Id = _choiceId
-            }));
+            });
         }
 
         public void StartChoice(IChoice choice, List<BoardCard> unitCards)
@@ -132,30 +143,25 @@ namespace Duelers.Local.Controller
             // TODO: the replaceSlots should be cleared
         }
 
-        public string[] GetActions()
+        public void AddCardToHand(Card card)
         {
-            var r = messages.ToArray();
-            messages.Clear();
-            return r;
-        }
-
-        public void AddCardToHand(BoardCard boardCard)
-        {
-            if(handSlots.Any(x => x.Value?.Id == boardCard.Id))
+            if(handSlots.Any(x => x.Value?.Id == card.Id))
             {
                 return;
             }
             var firstFreeSlot = handSlots.First(x => x.Value == null);
+            var boardCard = card.BoardCard;
             boardCard.gameObject.transform.parent = firstFreeSlot.Key.gameObject.transform;
             boardCard.gameObject.transform.localPosition = new Vector3(0, 0, 0);
             boardCard.gameObject.transform.localScale =
                 new Vector3(Mathf.Sign(boardCard.gameObject.transform.localScale.x) * 80f, 80f, 80f);
             handSlots[firstFreeSlot.Key] = boardCard;
-            firstFreeSlot.Key.SetMana(boardCard.Mana);
+            firstFreeSlot.Key.SetMana(card.Cost.ToString());
             firstFreeSlot.Key.BoardCardInHand = boardCard;
+            firstFreeSlot.Key.CardInHand = card;
         }
 
-        public void RemoveCardFromHand(BoardCard card)
+        public void RemoveCardFromHand(Card card)
         {
             var slot = handSlots.First(x => x.Value.Id == card.Id);
             Destroy(slot.Value.gameObject);
@@ -175,7 +181,7 @@ namespace Duelers.Local.Controller
         //    }
         //}
 
-        public void SelectHandCard(HandSlot slot)
+        public async void SelectHandCard(HandSlot slot)
         {
             var go = slot.BoardCardInHand;
             if (go == null)
@@ -187,10 +193,21 @@ namespace Duelers.Local.Controller
             //    var t = Grid.GetTile(id);
             //    t.HighlightTile(Color.red);
             //}
-            foreach (var id in Targets[go.Id].Ids)
+            var targets = JsonConvert.DeserializeObject<TargetList>(await _server.GetTargets(
+                new ResolveTargetRequest()
+                {
+                    Target = slot.CardInHand.Targets.FirstOrDefault(),
+                    Targets = Array.Empty<string>(),
+                    LastTarget = null
+                }
+            ));
+            foreach (var id in targets.Ids)
             {
                 var t = Grid.GetTile(id);
-                t.ShowSummonTile();
+                if (t)
+                {
+                    _AvailableTargets[t] = "summon";
+                }
             }
 
             _selected = (slot, go);

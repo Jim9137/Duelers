@@ -19,13 +19,10 @@ namespace Duelers.Server
         private readonly CancellationToken _cancellationToken = new CancellationToken();
         private readonly HttpClient _httpClient = new HttpClient();
 
-        private readonly Queue<string> _messagesReceived = new Queue<string>();
-        private readonly Queue<string> _messagesToBeSent = new Queue<string>();
         private static Uri baseUri = new Uri("https://mechaz.org/");
         private static Uri gameAddress = new Uri("wss://mechaz.org/api/mechazorg/v1/game/");
         private static Uri resolveAddress = new Uri("https://mechaz.org/api/mechazorg/v1/resolve-target/");
         private readonly WebSocketSharp.WebSocket _clientWebSocket = new WebSocketSharp.WebSocket(gameAddress.ToString());
-        private ArraySegment<byte> _buffer = new ArraySegment<byte>(new byte[2048]);
         [SerializeField] private string _deckId;
 
         [SerializeField] private string _password;
@@ -100,45 +97,12 @@ namespace Duelers.Server
             _clientWebSocket.SendAsync(JsonConvert.SerializeObject(startGame), b1 => { });
         }
 
-        public void SendActions(string[] actions)
+        public void SendMessage(TypeMessage message)
         {
-
-            foreach (var a in actions)
-            {
-                Debug.Log("Sending message: " + a, this);
-                var type = JsonConvert.DeserializeObject<TypeMessage>(a);
-                switch (type.Type)
-                {
-                    case MessageType.NONE:
-                        break;
-                    case MessageType.TILE:
-                        break;
-                    case MessageType.CHARACTER:
-                        break;
-                    case MessageType.CHOICE:
-                        var r = JsonConvert.DeserializeObject<UserChoicesMessage>(a);
-                        r.Token = _userToken;
-                        SendMessage(r);
-                        break;
-                    case MessageType.RESOLVE_CHOICE:
-
-
-                        break;
-                    case MessageType.CARD:
-                        break;
-                    case MessageType.PLAY:
-                        var p = JsonConvert.DeserializeObject<PlayMessage>(a);
-                        p.Token = _userToken;
-                        SendMessage(p);
-
-                        break;
-                }
-            }
-        }
-
-        private void SendMessage(object message)
-        {
-            _clientWebSocket.SendAsync(JsonConvert.SerializeObject(message), completed => { });
+            message.Token = _userToken;
+            var msgText = JsonConvert.SerializeObject(message);
+            Debug.Log(msgText);
+            _clientWebSocket.SendAsync(msgText, completed => { });
         }
 
         public async Task<string> GetTargets(ResolveTargetRequest resolveTargets)

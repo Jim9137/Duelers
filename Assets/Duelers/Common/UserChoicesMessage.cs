@@ -12,7 +12,5 @@ namespace Duelers.Common
         [JsonProperty("ids")] public string[] Ids { get; set; }
 
         [JsonProperty("id")] public string Id { get; set; }
-
-        [JsonProperty("token")] public string Token { get; set; }
     }
 }

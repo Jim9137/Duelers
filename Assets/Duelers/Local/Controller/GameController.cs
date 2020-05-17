@@ -43,7 +43,6 @@ namespace Duelers.Local.Controller
 
         private void Update()
         {
-            SentMessages();
             _grid.ProcessQueue();
 
             foreach (var character in SummonQueue.ToArray())
@@ -67,13 +66,7 @@ namespace Duelers.Local.Controller
 
             _cardController.Update();
         }
-
-        private void SentMessages()
-        {
-            // _unitController.GetActions();
-            var actions = _interface.GetActions();
-            _server.SendActions(actions);
-        }
+        
 
         private bool ProcessMessage(string message)
         {

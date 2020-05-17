@@ -45,13 +45,15 @@ namespace Duelers.Local.Controller
         {
             foreach (var card in DrawQueue.ToArray())
             {
-                _Interface.AddCardToHand(card.Draw());
+                card.Draw();
+                _Interface.AddCardToHand(card);
                 DrawQueue.Remove(card);
             }
             
             foreach (var card in DiscardQueue.ToArray())
             {
-                _Interface.RemoveCardFromHand(card.Discard());
+                card.Discard();
+                _Interface.RemoveCardFromHand(card);
                 DiscardQueue.Remove(card);
             }
         }

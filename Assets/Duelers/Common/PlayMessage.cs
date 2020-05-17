@@ -14,8 +14,5 @@ namespace Duelers.Common
 
         [JsonProperty("targets")]
         public string[] Targets { get; set; }
-
-        [JsonProperty("token")]
-        public string Token { get; set; }
     }
 }
