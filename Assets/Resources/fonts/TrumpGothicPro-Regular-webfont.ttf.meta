@@ -11,7 +11,10 @@ TrueTypeFontImporter:
   fontName: ".\x7F"
   fontNames:
   - ".\x7F"
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
